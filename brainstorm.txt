@@ -1,3 +1,23 @@
 // Brainstorming Ideas
 
 Zweidimensionale Arrays als Feld
+
+
+
+Blöcke: (Farben irrelevant außer Starblöcke)
+
+Start: Schwarz, 1x1, 1x2, 1x3
+
+
+Rot: 1x4, 1x5
+
+Blau: 2x3, 2x4, 2x5
+
+Gelb: 2x2, 3x3,
+
+Weiß: 3x4
+
+
+
+Wichtig!
+- const expression statt magic numbers
