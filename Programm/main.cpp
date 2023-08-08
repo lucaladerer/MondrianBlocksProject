@@ -1,11 +1,10 @@
 #include "menu.hpp"
-#include <iostream>
 
 int main()
 {
-    Menu menu;
-    menu.printIntroduction();
-    menu.chooseGamemode();
-    menu.chooseTemplate();
+    Menu menu1;
+    menu1.printIntroduction();
+    menu1.chooseGamemode();
+    menu1.chooseTemplate();
     return 0;
 }

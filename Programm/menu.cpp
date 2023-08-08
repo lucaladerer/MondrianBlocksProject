@@ -1,6 +1,6 @@
-#include "menu.hpp"
 #include <iostream>
 #include <string> 
+#include "menu.hpp"
 using namespace std;
 
 void Menu::printIntroduction()
@@ -56,9 +56,9 @@ Template Menu::chooseTemplate()
     template3.template3();
 
     cout << "Waehlen Sie nun eine Vorlage aus:\t";
-    cin >> chosenTemplate;
+    cin >> m_chosenTemplate;
 
-    switch (chosenTemplate)
+    switch (m_chosenTemplate)
     {
         case 1:
             cout << "Sie haben sich fuer Vorlage No.1 entschieden." << endl;

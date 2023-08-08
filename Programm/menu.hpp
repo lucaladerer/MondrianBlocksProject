@@ -4,6 +4,13 @@
 class Menu : public Template
 {
 public:
+    Menu()
+    : m_gamemode()
+    , m_chosenTemplate()
+    {};
+
+    ~Menu()
+    {};
 
     void printIntroduction();
 
@@ -13,5 +20,5 @@ public:
     
 protected:
     int m_gamemode;
-    int chosenTemplate;
+    int m_chosenTemplate;
 };
