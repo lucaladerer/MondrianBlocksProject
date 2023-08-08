@@ -11,6 +11,7 @@ public:
 
     Template chooseTemplate();
     
-private:
+protected:
     int m_gamemode;
+    int chosenTemplate;
 };

@@ -55,6 +55,24 @@ Template Menu::chooseTemplate()
     Template template3;
     template3.template3();
 
-    //cin >> chosenTemplate(int)
-    return template1;
+    cout << "Waehlen Sie nun eine Vorlage aus:\t";
+    cin >> chosenTemplate;
+
+    switch (chosenTemplate)
+    {
+        case 1:
+            cout << "Sie haben sich fuer Vorlage No.1 entschieden." << endl;
+            return template1;
+            break;
+        
+        case 2:
+            cout << "Sie haben sich fuer Vorlage No.2 entschieden." << endl;
+            return template2;
+            break;
+        
+        case 3:
+            cout << "Sie haben sich fuer Vorlage No.3 entschieden." << endl;
+            return template3;
+            break;
+    }
 }

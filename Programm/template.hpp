@@ -1,13 +1,15 @@
 #pragma once
-#include <string>
+#include "field.hpp"
+#include <array>
 const int fieldsize = 8;
+const char emptyElement = '0';
 
-class Template
+class Template : public Field
 {
 public:
 
     // Array als Rückgabewert, dann muss array nicht immer neu in template1() etc. erstellt werden
-    // Lösung: std::arry
+    // Lösung: std::array
     // char templateEmpty();
     
     void template1();
@@ -16,6 +18,11 @@ public:
 
     void template3();
 
-private:
+    
+protected:
     char m_template[fieldsize][fieldsize];
+    Field base;
+
+    // Versuch mit std::array
+    // std::array<std::array<char, fieldsize>, fieldsize> m_testTemplate;
 };
