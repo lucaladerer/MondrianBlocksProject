@@ -9,7 +9,7 @@ public:
 
     bool chooseGamemode();
 
-    void chooseTemplate();
+    Template chooseTemplate();
     
 private:
     int m_gamemode;

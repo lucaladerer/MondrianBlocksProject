@@ -34,7 +34,7 @@ bool Menu::chooseGamemode()
     }
 }
 
-void Menu::chooseTemplate()
+Template Menu::chooseTemplate()
 {
     cout << "Folgende Vorlagen stehen zur Verfuegung\n" << endl;
     
@@ -42,4 +42,19 @@ void Menu::chooseTemplate()
 
     Template template1;
     template1.template1();
+
+
+    cout << "Vorlage No.2:" << endl;
+
+    Template template2;
+    template2.template2();
+
+
+    cout << "Vorlage No.3:" << endl;
+
+    Template template3;
+    template3.template3();
+
+    //cin >> chosenTemplate(int)
+    return template1;
 }
