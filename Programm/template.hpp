@@ -1,5 +1,5 @@
 #pragma once
-#include "field.hpp"
+#include "Field.hpp"
 #include <array>
 const int fieldsize = 8;
 const char emptyElement = '0';

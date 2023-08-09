@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string> 
-#include "menu.hpp"
+#include "Menu.hpp"
 using namespace std;
 
 void Menu::printIntroduction()

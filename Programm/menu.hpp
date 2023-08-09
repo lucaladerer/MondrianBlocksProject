@@ -1,16 +1,16 @@
 #pragma once
-#include "template.hpp"
+#include "Template.hpp"
 
 class Menu : public Template
 {
 public:
-    Menu()
-    : m_gamemode()
-    , m_chosenTemplate()
-    {};
+    // Menu()
+    // : m_gamemode()
+    // , m_chosenTemplate()
+    // {};
 
-    ~Menu()
-    {};
+    // ~Menu()
+    // {};
 
     void printIntroduction();
 
