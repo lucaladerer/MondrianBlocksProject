@@ -18,10 +18,13 @@ public:
 
     void template3();
 
-    
+    void printTemplate(int templateNumber);
+
 protected:
     char m_template[fieldsize][fieldsize];
-    Field base;
+    Field baseT1;   //static?
+    Field baseT2;
+    Field baseT3;
 
     // Versuch mit std::array
     // std::array<std::array<char, fieldsize>, fieldsize> m_testTemplate;

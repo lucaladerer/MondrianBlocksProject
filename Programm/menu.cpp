@@ -3,6 +3,7 @@
 #include "Menu.hpp"
 using namespace std;
 
+// Hier wird die Einleitung ausgegeben
 void Menu::printIntroduction()
 {
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
@@ -14,6 +15,7 @@ void Menu::printIntroduction()
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" << endl;
 }
 
+// Hier wird der Spielmodus ausgewählt. Der Solver ist hier nicht spielbar, aber für die Vollständigkeit trotzdem vorhanden
 bool Menu::chooseGamemode()
 {
     cout << "Waehlen Sie einen Spielmodus:\n(1) - Spielen\n(2) - Solver" << endl;
@@ -25,35 +27,29 @@ bool Menu::chooseGamemode()
     //bool 0 = Spielen, bool 1 = Soler
     case 1:
         cout << "Sie haben sich fuer den Spielmodus 'Spielen' entschieden!" << endl;
-        return 0;  
-        break;
+        return 0;
     case 2:
-        cout << "Sie haben sich fuer den Spielmodus 'Solver' entschieden!" << endl;
-        return 1;
-        break;
+        cout << "\n*WIP* ... Work In Progress ... *WIP*\t\tWaehlen Sie erneut!\n" << endl;
+        return chooseGamemode();
     }
 }
 
-Template Menu::chooseTemplate()
+// Hier werden 3 Vorlagen in der Konsole ausgegeben. Im Anschluss wird über den Input die Vorlage ausgewählt.
+int Menu::chooseTemplate()
 {
     cout << "Folgende Vorlagen stehen zur Verfuegung\n" << endl;
     
     cout << "Vorlage No.1:" << endl;
-
-    Template template1;
     template1.template1();
-
+    template1.printTemplate(1);
 
     cout << "Vorlage No.2:" << endl;
-
-    Template template2;
     template2.template2();
-
+    template2.printTemplate(2);    
 
     cout << "Vorlage No.3:" << endl;
-
-    Template template3;
     template3.template3();
+    template3.printTemplate(3);
 
     cout << "Waehlen Sie nun eine Vorlage aus:\t";
     cin >> m_chosenTemplate;
@@ -62,17 +58,22 @@ Template Menu::chooseTemplate()
     {
         case 1:
             cout << "Sie haben sich fuer Vorlage No.1 entschieden." << endl;
-            return template1;
-            break;
+            // baseT1.printField();
+            return 1;
         
         case 2:
             cout << "Sie haben sich fuer Vorlage No.2 entschieden." << endl;
-            return template2;
-            break;
+            // baseT2.printField();
+            return 2;
         
         case 3:
             cout << "Sie haben sich fuer Vorlage No.3 entschieden." << endl;
-            return template3;
-            break;
+            // baseT3.printField();
+            return 3;
+        
+        default:
+            cout << "\n*Ungueltige Eingabe! Waehlen Sie erneut*\n\n" << endl;
+            chooseTemplate();
     }
+    
 }

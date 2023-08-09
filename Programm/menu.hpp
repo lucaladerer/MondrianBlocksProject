@@ -16,9 +16,14 @@ public:
 
     bool chooseGamemode();
 
-    Template chooseTemplate();
-    
+    int chooseTemplate();
+
+        
 protected:
     int m_gamemode;
     int m_chosenTemplate;
+    Template template1;
+    Template template2;
+    Template template3;
+    
 };

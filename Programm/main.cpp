@@ -1,10 +1,19 @@
 #include "Menu.hpp"
+#include <iostream>
 
 int main()
 {
-    Menu menu1;
-    menu1.printIntroduction();
-    menu1.chooseGamemode();
-    menu1.chooseTemplate();
+    Menu startMenu;
+    startMenu.printIntroduction();
+    startMenu.chooseGamemode();
+
+    int chosenTemplate = startMenu.chooseTemplate();
+
+    std::cout << chosenTemplate << std::endl;
+
+    // Game game1;
+    // game1.printField(chosenTemplate);
+    // Vorschlag!
+
     return 0;
 }

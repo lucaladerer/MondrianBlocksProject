@@ -15,40 +15,41 @@ using namespace std;
 //     }   
 // }
 
+// Über diese Funktion wird das leere Feld erstellt und mit den entsprechenen Kreuzen gefüllt.
 void Template::template1()
 {
     cout << "Schwierigkeitsgrad: EINFACH\n" << endl;
 
-    base.createField();
-    base.editFieldForTemplate(7, 0);
-    base.editFieldForTemplate(7, 1);
-    base.editFieldForTemplate(7, 2);
-    base.editFieldForTemplate(7, 0);
-    base.editFieldForTemplate(6, 0);
-    base.editFieldForTemplate(5, 0);
-    base.printField();
+    baseT1.createField();
+    baseT1.editFieldForTemplate(7, 0);
+    baseT1.editFieldForTemplate(7, 1);
+    baseT1.editFieldForTemplate(7, 2);
+    baseT1.editFieldForTemplate(7, 0);
+    baseT1.editFieldForTemplate(6, 0);
+    baseT1.editFieldForTemplate(5, 0);
+    // baseT1.printField();
 
-    // base.field[7][0] = 'X';
-    // base.field[7][1] = 'X';
-    // base.field[7][2] = 'X';
-    // base.field[7][0] = 'X';
-    // base.field[6][0] = 'X';
-    // base.field[5][0] = 'X';
+    // baseT1.field[7][0] = 'X';
+    // baseT1.field[7][1] = 'X';
+    // baseT1.field[7][2] = 'X';
+    // baseT1.field[7][0] = 'X';
+    // baseT1.field[6][0] = 'X';
+    // baseT1.field[5][0] = 'X';
 }
 
-
+// Über diese Funktion wird das leere Feld erstellt und mit den entsprechenen Kreuzen gefüllt.
 void Template::template2()
 {
     cout << "Schwierigkeitsgrad: MITTEL\n" << endl;
 
-    base.createField();
-    base.editFieldForTemplate(7, 5);
-    base.editFieldForTemplate(7, 6);
-    base.editFieldForTemplate(7, 7);
-    base.editFieldForTemplate(0, 6);
-    base.editFieldForTemplate(0, 7);
-    base.editFieldForTemplate(0, 0);
-    base.printField();
+    baseT2.createField();
+    baseT2.editFieldForTemplate(7, 5);
+    baseT2.editFieldForTemplate(7, 6);
+    baseT2.editFieldForTemplate(7, 7);
+    baseT2.editFieldForTemplate(0, 6);
+    baseT2.editFieldForTemplate(0, 7);
+    baseT2.editFieldForTemplate(0, 0);
+    // baseT2.printField();
 
     // m_template[7][5] = 'X';
     // m_template[7][6] = 'X';
@@ -59,18 +60,19 @@ void Template::template2()
 }
 
 
+// Über diese Funktion wird das leere Feld erstellt und mit den entsprechenen Kreuzen gefüllt.
 void Template::template3()
 {
     cout << "Schwierigkeitsgrad: SCHWER\n" << endl;
 
-    base.createField();
-    base.editFieldForTemplate(0, 0);
-    base.editFieldForTemplate(1, 0);
-    base.editFieldForTemplate(2, 0);
-    base.editFieldForTemplate(4, 3);
-    base.editFieldForTemplate(4, 4);
-    base.editFieldForTemplate(6, 7);
-    base.printField();
+    baseT3.createField();
+    baseT3.editFieldForTemplate(0, 0);
+    baseT3.editFieldForTemplate(1, 0);
+    baseT3.editFieldForTemplate(2, 0);
+    baseT3.editFieldForTemplate(4, 3);
+    baseT3.editFieldForTemplate(4, 4);
+    baseT3.editFieldForTemplate(6, 7);
+    // baseT3.printField();
 
     // m_template[0][0] = 'X';
     // m_template[1][0] = 'X';
@@ -80,6 +82,23 @@ void Template::template3()
     // m_template[6][7] = 'X';
 }
 
+
+// Über diese Funktion wird das entsprechende Template in der Konsole ausgegeben.
+void Template::printTemplate(int templateNumber)
+{
+    switch (templateNumber)
+    {
+    case 1:
+        baseT1.printField();
+        break;
+    case 2:
+        baseT2.printField();
+        break;
+    case 3:
+        baseT3.printField();
+        break;
+    }
+}
 
 
 

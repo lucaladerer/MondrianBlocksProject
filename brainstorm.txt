@@ -21,3 +21,7 @@ Weiß: 3x4
 
 Wichtig!
 - const expression statt magic numbers
+
+
+
+In fieldVisualization.drawio befindet sich das Feld mit seinen Indexen für jedes Element.
