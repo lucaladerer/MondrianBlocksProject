@@ -1,4 +1,4 @@
-#pragma once
+/* #pragma once
 
 #include "field.hpp"
 using namespace std;
@@ -11,4 +11,4 @@ void createBlock(int input);
 private:
 Field playField;
 
-};
+}; */

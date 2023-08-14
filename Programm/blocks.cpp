@@ -1,5 +1,5 @@
-#include "blocks.hpp"
-#include <string.h>
+/* #include "blocks.hpp"
+#include <string>
 using namespace std;
 
 void Block::createBlock(int input)
@@ -23,4 +23,4 @@ case 12:
     playField.editFieldForTemplate(5, 5);
 }
 }
-}
+} */
