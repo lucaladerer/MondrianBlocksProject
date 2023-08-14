@@ -1,6 +1,5 @@
 #include "Field.hpp"
 #include <iostream>
-using namespace std;
 
 
 // Hier wird das "leere" 8x8 Feld mit 0 als char erstellt
@@ -23,14 +22,14 @@ void Field::printField()
     {
         for(int row = 0; row <= 7; row++)
         {
-            cout << field[col][row] << ' ';
+            std::cout << field[col][row] << ' ';
             if(row == 7)    
             {
-                cout << endl;
+                std::cout << std::endl;
             }
         }
     }
-    cout << "\n" << endl;
+    std::cout << "\n" << std::endl;
 }
 
 
