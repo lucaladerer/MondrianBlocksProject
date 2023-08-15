@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string> 
-#include "Menu.hpp"
+#include "menu.hpp"
 
 // Hier wird die Einleitung ausgegeben
 void Menu::printIntroduction()

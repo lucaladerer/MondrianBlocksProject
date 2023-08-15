@@ -1,5 +1,5 @@
 #pragma once
-#include "Template.hpp"
+#include "template.hpp"
 
 class Menu : public Template
 {

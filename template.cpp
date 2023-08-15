@@ -1,4 +1,4 @@
-#include "Template.hpp"
+#include "template.hpp"
 #include <iostream>
 
 // Array als Rückgabewert, dann muss array nicht immer neu in template1() etc. erstellt werden
