@@ -22,7 +22,7 @@ In fieldVisualization.drawio befindet sich das Feld mit seinen Indexen für jede
 "Rules" Klasse, die Rahmenbedingungen für Spiel regelt:
 Rules game
 game.CheckFit(blocksize, pos) (--> bool; true wenn passt)
-game.SetTemplate(template no.)  (--> vererbt an blocks, damit klar ist welche Blöcke noch zum setzen da sind)
+//game.SetTemplate(template no.)  (--> vererbt an blocks, damit klar ist welche Blöcke noch zum setzen da sind)
 
 Blocks Klasse Ideen:
 
