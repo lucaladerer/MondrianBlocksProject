@@ -19,7 +19,7 @@ bool Win::checkForWin(char checkArray[8][8])
 
 void Win::winMessage()
 {
-    int turns = 0;
+    int turns = 0;              // Muss noch entfernt werden, ist nur da um Fehler beim Compilen zu beheben
     std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
     std::cout << "Herzlichen Glueckwunsch!\nSie haben das Level erfolgreich geloest!" << std::endl;
     std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;

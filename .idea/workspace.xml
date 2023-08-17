@@ -23,25 +23,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2cc86fd3-8149-48b9-832f-e20eec1c4abe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/blocks.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/blocks.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5fabb3c06eb1f98baf88.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-08-17T12-20-29-0925.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-MondrianBlocksProject-Debug-382309d61ee1457486f4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default/.cmake/api/v1/reply/codemodel-v2-741700918463c94276cd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default/.cmake/api/v1/reply/index-2023-08-17T12-20-29-0889.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default/.cmake/api/v1/reply/target-MondrianBlocksProject-df2e4cb0f986b9cf4cd4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/menu.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/rules.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/rules.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stats.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/stats.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start_project.bat" beforeDir="false" afterPath="$PROJECT_DIR$/start_project.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/win.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/win.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/win.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,11 +88,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MondrianBlocksProject" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MondrianBlocksProject" TARGET_NAME="MondrianBlocksProject" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MondrianBlocksProject" RUN_TARGET_NAME="MondrianBlocksProject">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -129,7 +108,10 @@
       <workItem from="1692273917431" duration="621000" />
       <workItem from="1692274639560" duration="1285000" />
       <workItem from="1692275989002" duration="625000" />
-      <workItem from="1692276690226" duration="4663000" />
+      <workItem from="1692276690226" duration="4848000" />
+      <workItem from="1692285096393" duration="597000" />
+      <workItem from="1692291541752" duration="595000" />
+      <workItem from="1692293026381" duration="574000" />
     </task>
     <servers />
   </component>
