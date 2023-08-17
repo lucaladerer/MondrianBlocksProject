@@ -1,4 +1,6 @@
-#pragma once
+#ifndef WIN_HPP_INCLUDED
+#define WIN_HPP_INCLUDED
+
 #include "stats.hpp"
 
 class Win : public Stats
@@ -11,3 +13,5 @@ private:
     bool noZero;
     bool playAgain;
 };
+
+#endif  // WIN_HPP_INCLUDED

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef STATS_HPP_INCLUDED
+#define STATS_HPP_INCLUDED
 
 // Zählen der Zeit ab Begin des Levels
 class Stats
@@ -12,3 +13,5 @@ private:
     std::chrono::time_point<std::chrono::steady_clock> end; 
     std::chrono::duration<double> timeInSeconds;
 };
+
+#endif  // STATS_HPP_INCLUDED

@@ -1,3 +1,6 @@
+#ifndef RULES_HPP_INCLUDED
+#define RULES_HPP_INCLUDED
+
 class Rules
 {
 public:
@@ -7,3 +10,5 @@ private:
     const int upperLimit = 7;
     bool legalMove;
 };
+
+#endif  // RULES_HPP_INCLUDED

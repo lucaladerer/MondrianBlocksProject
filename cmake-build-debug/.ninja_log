@@ -1,0 +1,15 @@
+# ninja log v5
+31	3260	7139783982244577	CMakeFiles/MondrianBlocksProject.dir/rules.cpp.obj	41e9ea3b102c798d
+1	3339	7139783983284594	CMakeFiles/MondrianBlocksProject.dir/main.cpp.obj	d5342435286166f7
+45	3452	7139783984724553	CMakeFiles/MondrianBlocksProject.dir/menu.cpp.obj	c589f4ae8d6c3c8b
+53	3485	7139783984944582	CMakeFiles/MondrianBlocksProject.dir/template.cpp.obj	6ceadf579f8b8580
+8	2485	7139787718156682	CMakeFiles/MondrianBlocksProject.dir/field.cpp.obj	1c4d3dce66a2e6ef
+26	2599	7139787719319710	CMakeFiles/MondrianBlocksProject.dir/blocks.cpp.obj	180b6ed27a8f7dbc
+17	2776	7139787721123537	CMakeFiles/MondrianBlocksProject.dir/stats.cpp.obj	a6abc5cbb5a41b62
+7	176	7139788008043565	CMakeFiles/MondrianBlocksProject.dir/win.cpp.obj	4b15f9f6ac6974db
+7	1392	7139788551807179	CMakeFiles/MondrianBlocksProject.dir/template.cpp.obj	6ceadf579f8b8580
+1393	1743	7139788555188136	MondrianBlocksProject.exe	e557876a51dd2f38
+9	1821	7139789661055333	CMakeFiles/MondrianBlocksProject.dir/main.cpp.obj	d5342435286166f7
+1822	2204	7139789664640360	MondrianBlocksProject.exe	e557876a51dd2f38
+10	1401	7139790912195647	CMakeFiles/MondrianBlocksProject.dir/field.cpp.obj	1c4d3dce66a2e6ef
+1402	1703	7139790915145801	MondrianBlocksProject.exe	e557876a51dd2f38
