@@ -43,13 +43,41 @@ void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY)
 {
     short xPos = x - 1;
     short yPos = y - 1;
+    short temp;
+
+    // Für Rotation von Block
+    // if(rotateBlock)
+    // {
+    //     temp = blocksizeX;
+    //     blocksizeX = blocksizeY;
+    //     blocksizeY = temp;
+    // }
+
+    legalMove = true;
+
+    // Check auf Legal Move
     for(int col = xPos; col < xPos + blocksizeX; col++)
-    {
-        for(int row = yPos; row < yPos + blocksizeY; row++)
         {
-            field[row][col] = c;
+            for(int row = yPos; row < yPos + blocksizeY; row++)
+            {
+                if(checkRules.checkLegalMove(field, row, col) == false)
+                {
+                    legalMove = false;
+                    // Field::removeBlock(c)
+                }
+            }
         }
 
+    if(legalMove == true)
+    {
+        for(int col = xPos; col < xPos + blocksizeX; col++)
+        {
+            for(int row = yPos; row < yPos + blocksizeY; row++)
+            {
+                field[row][col] = c;
+                checkWin.checkForWin(field);
+            }
+        }
+        Stats::turns++;
     }
-    turns++;
 }

@@ -1,5 +1,5 @@
-#include <iostream>
 #include "blocks.hpp"
+#include <iostream>
 
 Blocks::Blocks() {}
 Blocks::~Blocks() {}
@@ -111,7 +111,7 @@ bool Blocks::rotateBlock(char yn)
 {
     if(~rotated)
     {
-        if (yn == 'y' || yn == 'Y') {
+        if (yn == 'y' || yn == 'Y' || yn == 'j' || yn == 'J') {
             rotated = true;
             return false;
         } else if (yn == 'n' || yn == 'N') {

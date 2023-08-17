@@ -22,6 +22,7 @@ class Blocks
     protected:
     Template playTemplate;
     Rules checkMove;
+    bool rotated = false;
 
     private:
     int templatePicked;
@@ -55,7 +56,6 @@ class Blocks
     bool av33 = true;
     bool av34 = true;
 
-    bool rotated = false;
     bool posOk = true;
 };
 

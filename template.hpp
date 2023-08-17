@@ -2,7 +2,7 @@
 #define TEMPLATE_HPP_INCLUDED
 
 #include "field.hpp"
-#include <array>
+// #include <array>
 const int fieldsize = 8;
 const char emptyElement = '0';
 
