@@ -1,27 +1,24 @@
 #include "win.hpp"
 #include <iostream>
 
-bool Win::checkForWin(char checkArray)
+bool Win::checkForWin(char checkArray[8][8])
 {
     for(int ver = 0; ver <= 7; ver++)
     {
         for(int hor = 0; hor <= 7; hor++)
         {
-            if(checkArray[ver][hor] != '0')
+            if(checkArray[ver][hor] == '0')
             {
-                noZero = true;
-            }
-            else
-            {
-                noZero = false;
+                return false;
             }
         }
     }
-    return noZero;
+    return true;
 }
 
 void Win::winMessage()
 {
+    int turns = 0;
     std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
     std::cout << "Herzlichen Glueckwunsch!\nSie haben das Level erfolgreich geloest!" << std::endl;
     std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;

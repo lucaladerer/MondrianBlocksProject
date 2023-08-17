@@ -18,4 +18,6 @@ add_executable(MondrianBlocksProject
         template.cpp
         template.hpp
         win.cpp
-        win.hpp blocks.cpp)
+        win.hpp
+        blocks.cpp
+        blocks.hpp)

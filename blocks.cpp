@@ -58,19 +58,36 @@ void Blocks::userSetBlock(int y, int x)
 {
     int val = blockbuffer;
     short blocksizeX, blocksizeY;
-    switch(val)
+    if(~rotated)
     {
-        case 65: { blocksizeY = 1; blocksizeX = 4; av14 = false; break;}
-        case 66: { blocksizeY = 1; blocksizeX = 5; av15 = false; break;}
-        case 67: { blocksizeY = 2; blocksizeX = 3; av23 = false; break;}
-        case 68: { blocksizeY = 2; blocksizeX = 4; av24 = false; break;}
-        case 69: { blocksizeY = 2; blocksizeX = 5; av25 = false; break;}
-        case 70: { blocksizeY = 2; blocksizeX = 2; av22 = false; break;}
-        case 71: { blocksizeY = 3; blocksizeX = 3; av33 = false; break;}
-        case 72: { blocksizeY = 3; blocksizeX = 4; av34 = false; break;}
-        default: { std::cout << "Error setting Block" << std::endl; break; }
+        switch(val)
+        {
+            case 65: { blocksizeY = 1; blocksizeX = 4; av14 = false; break;}
+            case 66: { blocksizeY = 1; blocksizeX = 5; av15 = false; break;}
+            case 67: { blocksizeY = 2; blocksizeX = 3; av23 = false; break;}
+            case 68: { blocksizeY = 2; blocksizeX = 4; av24 = false; break;}
+            case 69: { blocksizeY = 2; blocksizeX = 5; av25 = false; break;}
+            case 70: { blocksizeY = 2; blocksizeX = 2; av22 = false; break;}
+            case 71: { blocksizeY = 3; blocksizeX = 3; av33 = false; break;}
+            case 72: { blocksizeY = 3; blocksizeX = 4; av34 = false; break;}
+            default: { std::cout << "Error setting Block" << std::endl; break; }
+        }
     }
-
+    else if(rotated)
+    {
+        switch(val)
+        {
+            case 65: { blocksizeY = 4; blocksizeX = 1; av14 = false; break;}
+            case 66: { blocksizeY = 5; blocksizeX = 1; av15 = false; break;}
+            case 67: { blocksizeY = 3; blocksizeX = 2; av23 = false; break;}
+            case 68: { blocksizeY = 4; blocksizeX = 2; av24 = false; break;}
+            case 69: { blocksizeY = 5; blocksizeX = 2; av25 = false; break;}
+            case 70: { blocksizeY = 2; blocksizeX = 2; av22 = false; break;}
+            case 71: { blocksizeY = 3; blocksizeX = 3; av33 = false; break;}
+            case 72: { blocksizeY = 4; blocksizeX = 3; av34 = false; break;}
+            default: { std::cout << "Error setting Block" << std::endl; break; }
+        }
+    }
     playTemplate.pasteToTemplate(y, x, blockbuffer, blocksizeX, blocksizeY);
 }
 
@@ -87,4 +104,35 @@ void Blocks::availableBlocks()
     if(av34) std::cout << "H: 3x4 ";
     std::cout << std::endl;
     
+}
+
+bool Blocks::rotateBlock(char yn)
+{
+    if(~rotated)
+    {
+        if (yn == 'y' || yn == 'Y') {
+            rotated = true;
+            return false;
+        } else if (yn == 'n' || yn == 'N') {
+            rotated = false;
+            return false;
+        } else {
+            std::cout << "Falsche Eingabe. Versuchen Sie es erneut." << std::endl;
+            return true;
+        }
+    }
+    else if(rotated)
+    {
+        if (yn == 'y' || yn == 'Y') {
+            rotated = false;
+            return false;
+        } else if (yn == 'n' || yn == 'N') {
+            rotated = true;
+            return false;
+        } else {
+            std::cout << "Falsche Eingabe. Versuchen Sie es erneut." << std::endl;
+            return true;
+        }
+    }
+    else return true;
 }

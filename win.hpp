@@ -6,11 +6,10 @@
 class Win : public Stats
 {
 public:
-    bool checkForWin(char checkArray);
+    static bool checkForWin(char checkArray[8][8]);
 
     void winMessage();
 private:
-    bool noZero;
     bool playAgain;
 };
 

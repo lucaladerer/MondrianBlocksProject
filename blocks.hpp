@@ -2,6 +2,7 @@
 #define BLOCKS_HPP_INCLUDED
 
 #include "template.hpp"
+#include "rules.hpp"
 
 class Blocks
 {
@@ -17,8 +18,10 @@ class Blocks
 
         void availableBlocks();
 
+        bool rotateBlock(char yn);
     protected:
     Template playTemplate;
+    Rules checkMove;
 
     private:
     int templatePicked;
@@ -51,6 +54,9 @@ class Blocks
     bool av22 = true;
     bool av33 = true;
     bool av34 = true;
+
+    bool rotated = false;
+    bool posOk = true;
 };
 
 #endif  // BLOCKS_HPP_INCLUDED

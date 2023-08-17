@@ -20,9 +20,18 @@ int main()
     std::cin >> blockPicked;
     std::cout <<  std::endl;
     userblocks.userChooseBlock(blockPicked);
-    std::cout << "Wo moechten Sie den Block platzieren?\nGeben Sie zuerst die vertikale Position ein, dann die horizontale Position.\nPositionen vom 1-8, gezaehlt von links nach rechts bzw. oben nach unten." << std::endl;
+
+    bool rotateRequest = true;
+    char rotateInput;
+    while(rotateRequest)
+    {
+        std::cout << "Moechten Sie den Block drehen?\nGeben Sie ein 'y' für Ja oder 'n' für nein." << std::endl;
+        std::cin >> rotateInput;
+        rotateRequest = userblocks.rotateBlock(rotateInput);
+    }
+    std::cout << "Wo moechten Sie den Block platzieren?\nGeben Sie zuerst die horizontale Position ein, dann die vertikale Position.\nPositionen vom 1-8, gezaehlt von links nach rechts bzw. oben nach unten." << std::endl;
     int x, y;
-    std::cin >> y >> x;
+    std::cin >> x >> y;
     userblocks.userSetBlock(y, x);
 
     // Game game1;

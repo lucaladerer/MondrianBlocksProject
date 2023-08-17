@@ -1,4 +1,6 @@
-#pragma once
+#ifndef MENU_HPP_INCLUDED
+#define MENU_HPP_INCLUDED
+
 #include "template.hpp"
 
 class Menu : public Template
@@ -27,3 +29,5 @@ protected:
     Template template3;
     
 };
+
+#endif  // MENU_HPP_INCLUDED
