@@ -1,4 +1,5 @@
 #include "win.hpp"
+#include "blocks.hpp"
 #include <iostream>
 
 bool Win::checkForWin(char checkArray[8][8])

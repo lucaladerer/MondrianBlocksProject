@@ -91,6 +91,7 @@ void Blocks::userSetBlock(int y, int x)
     playTemplate.pasteToTemplate(y, x, blockbuffer, blocksizeX, blocksizeY);
 }
 
+
 void Blocks::availableBlocks()
 {
     std::cout << "Verfuegbare Bloecke:" << std::endl;

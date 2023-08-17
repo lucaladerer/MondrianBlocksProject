@@ -1,11 +1,21 @@
 #ifndef FIELD_HPP_INCLUDED
 #define FIELD_HPP_INCLUDED
 
+#include "stats.hpp"
+
 const int mondrianFieldSize = 8;
 
-class Field
+class Field : public Stats
 {
 public:
+    Field()
+    {
+        turns = 0;
+    };
+
+    ~Field()
+    {};
+
     void createField();
 
     void printField();

@@ -51,5 +51,5 @@ void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY)
         }
 
     }
-
+    turns++;
 }

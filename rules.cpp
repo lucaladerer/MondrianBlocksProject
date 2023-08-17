@@ -1,4 +1,3 @@
-#pragma once
 #include "rules.hpp"
 #include <iostream>
 
