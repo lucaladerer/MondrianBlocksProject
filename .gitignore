@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+<<<<<<< Updated upstream
+=======
+
+# VSCode
+/.vscode
+/.idea
+/output
+
+# CMake
+CMakeLists.txt
+/cmake-build-debug
+>>>>>>> Stashed changes

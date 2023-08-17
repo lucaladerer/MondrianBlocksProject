@@ -27,6 +27,8 @@ void Template::template1()
     baseT1.editFieldForTemplate(7, 0);
     baseT1.editFieldForTemplate(6, 0);
     baseT1.editFieldForTemplate(5, 0);
+
+    pickedTemplate = 1;
     // baseT1.printField();
 
     // baseT1.field[7][0] = 'X';
@@ -49,6 +51,8 @@ void Template::template2()
     baseT2.editFieldForTemplate(0, 6);
     baseT2.editFieldForTemplate(0, 7);
     baseT2.editFieldForTemplate(0, 0);
+
+    pickedTemplate = 2;
     // baseT2.printField();
 
     // m_template[7][5] = 'X';
@@ -72,6 +76,8 @@ void Template::template3()
     baseT3.editFieldForTemplate(4, 3);
     baseT3.editFieldForTemplate(4, 4);
     baseT3.editFieldForTemplate(6, 7);
+
+    pickedTemplate = 3;
     // baseT3.printField();
 
     // m_template[0][0] = 'X';
@@ -100,7 +106,16 @@ void Template::printTemplate(int templateNumber)
     }
 }
 
-
+void Template::pasteToTemplate(int y, int x, char c, short blocksizeX, short blocksizeY)
+{
+    switch(pickedTemplate)
+    {
+        case 1: { baseT1.setBlock(y, x, c, blocksizeX, blocksizeY); baseT1.printField(); break; }
+        case 2: { baseT2.setBlock(y, x, c, blocksizeX, blocksizeY); baseT2.printField(); break; }
+        case 3: { baseT3.setBlock(y, x, c, blocksizeX, blocksizeY); baseT3.printField(); break; }
+        default: std::cout << "Error printing block via class: 'Template'" << std::endl; break;
+    }
+}
 
 
 

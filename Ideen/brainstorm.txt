@@ -1,0 +1,55 @@
+// Brainstorming Ideas
+
+Zweidimensionale Arrays als Feld
+
+
+Blöcke: (Farben irrelevant außer Starblöcke)
+
+Start: Schwarz, 1x1, 1x2, 1x3
+
+Rot: 1x4, 1x5
+Blau: 2x3, 2x4, 2x5
+Gelb: 2x2, 3x3
+Weiß: 3x4
+
+
+Wichtig!
+- const expression statt magic numbers
+
+
+In fieldVisualization.drawio befindet sich das Feld mit seinen Indexen für jedes Element.
+
+"Rules" Klasse, die Rahmenbedingungen für Spiel regelt:
+Rules game
+game.CheckFit(blocksize, pos) (--> bool; true wenn passt)
+game.SetTemplate(template no.)  (--> vererbt an blocks, damit klar ist welche Blöcke noch zum setzen da sind)
+
+Blocks Klasse Ideen:
+
+bool insert(int ankerPos[2], char size[2])
+{
+    if(game.Checkfit(size)){
+        short xpos = ankerPos[0];
+        short ypos = ankerPos[1];
+        short maxX = size[0];
+        short maxY = size[1];
+        for(short x = xpos; x <= maxX; x++){
+            for(short y = ypos; y <= maxY; y++){
+                fieldset.template(x, y);
+        }
+    }
+        return true;
+    }
+    else return false;
+}
+
+z.B. für 3x4 Block an pos. (0|0):
+int insertPos[2] = {0, 0};
+char insertBlockSize[3] = {'3', '4'};
+blocks.insert(insertPos, insertBlockSize);
+
+Erstmal ohne Verschieben (Nur setzen)
+
+Übergabe Speicheradresse ausgewähltes Template an Block Klasse zum Bearbeiten
+
+Field funktion setBlock
