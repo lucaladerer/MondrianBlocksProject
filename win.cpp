@@ -23,7 +23,7 @@ void Win::winMessage()
     std::cout << "Herzlichen Glueckwunsch!\nSie haben das Level erfolgreich geloest!" << std::endl;
     std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
     // stats.printElapsedTime();
-    std::cout << "\nSie haben zum Loesen des Levels " << turns << " Zuege benoetigt." << std::endl;
+    // std::cout << "\nSie haben zum Loesen des Levels " << Stats::turns << " Zuege benoetigt." << std::endl;       Auskommentiert wegen Compilerfehler!
     std::cout << "Wollen Sie nochmal spielen?\n(1): JA\n(2): Nein\t";
     std::cin >> playAgain;
     // Hier soll die main nochmal aufgerufen werden

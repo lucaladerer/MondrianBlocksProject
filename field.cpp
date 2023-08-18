@@ -39,10 +39,10 @@ void Field::editFieldForTemplate(int y, int x)
     field[y][x] = 'X';
 }
 
-void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY)
+void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, bool rotated)
 {
-    short xPos = x - 1;
-    short yPos = y - 1;
+    int xPos = x - 1;
+    int yPos = y - 1;
     short temp;
 
     // Für Rotation von Block
@@ -56,28 +56,49 @@ void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY)
     legalMove = true;
 
     // Check auf Legal Move
-    for(int col = xPos; col < xPos + blocksizeX; col++)
-        {
-            for(int row = yPos; row < yPos + blocksizeY; row++)
-            {
-                if(checkRules.checkLegalMove(field, row, col) == false)
-                {
+    if(~rotated)
+    {
+        for (int col = xPos; col < xPos + blocksizeX; col++) {
+            for (int row = yPos; row < yPos + blocksizeY; row++) {
+                if (~checkRules.checkLegalMove(field, row, col)) {
                     legalMove = false;
                     // Field::removeBlock(c)
                 }
             }
         }
-
-    if(legalMove == true)
+    }
+    else if(rotated)
     {
-        for(int col = xPos; col < xPos + blocksizeX; col++)
-        {
-            for(int row = yPos; row < yPos + blocksizeY; row++)
-            {
-                field[row][col] = c;
-                checkWin.checkForWin(field);
+        for (int col = xPos; col < xPos + blocksizeX; col++) {
+            for (int row = yPos; row < yPos + blocksizeY; row++) {
+                if (~checkRules.checkLegalMove(field, col, row)) {
+                    legalMove = false;
+                    // Field::removeBlock(c)
+                }
             }
         }
-        Stats::turns++;
+    }
+
+    if(legalMove)
+    {
+        if(~rotated)
+        {
+            for (int col = xPos; col < xPos + blocksizeX; col++) {
+                for (int row = yPos; row < yPos + blocksizeY; row++) {
+                    field[row][col] = c;
+                }
+            }
+        }
+        else if(rotated)
+        {
+            for(int col = xPos; col < xPos + blocksizeY; col++) {
+                for(int row = yPos; row < yPos + blocksizeX; row++) {
+                    field[row][col] = c;
+                }
+            }
+        }
+
+        checkWin.checkForWin(field);
+        // Stats::turns++; Auskommentiert wegen Compilerfehler!
     }
 }

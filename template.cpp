@@ -108,13 +108,13 @@ void Template::printTemplate(int templateNumber)
     }
 }
 
-void Template::pasteToTemplate(int y, int x, char c, short blocksizeX, short blocksizeY)
+void Template::pasteToTemplate(int y, int x, char c, short blocksizeX, short blocksizeY, bool rotated)
 {
     switch(pickedTemplate)
     {
-        case 1: { baseT1.setBlock(y, x, c, blocksizeX, blocksizeY); baseT1.printField(); break; }
-        case 2: { baseT2.setBlock(y, x, c, blocksizeX, blocksizeY); baseT2.printField(); break; }
-        case 3: { baseT3.setBlock(y, x, c, blocksizeX, blocksizeY); baseT3.printField(); break; }
+        case 1: { baseT1.setBlock(y, x, c, blocksizeX, blocksizeY, rotated); baseT1.printField(); break; }
+        case 2: { baseT2.setBlock(y, x, c, blocksizeX, blocksizeY, rotated); baseT2.printField(); break; }
+        case 3: { baseT3.setBlock(y, x, c, blocksizeX, blocksizeY, rotated); baseT3.printField(); break; }
         default: std::cout << "Error printing block via class: 'Template'" << std::endl; break;
     }
 }

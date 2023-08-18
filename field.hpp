@@ -1,7 +1,7 @@
 #ifndef FIELD_HPP_INCLUDED
 #define FIELD_HPP_INCLUDED
 
-// #include "stats.hpp"
+#include "stats.hpp"
 #include "win.hpp"
 #include "rules.hpp"
 
@@ -12,7 +12,7 @@ class Field : public Win, public Rules
 public:
     Field()
     {
-        turns = 0;
+       // Stats::turns = 0;     Auskommentiert wegen Compilerfehler!
     };
 
     ~Field()
@@ -24,7 +24,7 @@ public:
 
     void editFieldForTemplate(int y, int x);
 
-    void setBlock(int y, int x, char c, short blocksizeX, short blocksizeY);
+    void setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, bool rotated);
 protected:
     char field[mondrianFieldSize][mondrianFieldSize];
     Win checkWin;

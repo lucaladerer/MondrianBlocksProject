@@ -12,9 +12,9 @@ class Blocks
 
         void setPlayTemplate(int chooseTemplate);
 
-        void userChooseBlock(char chosenBlock[3]);
+        bool userChooseBlock(char chosenBlock[3]);
 
-        void userSetBlock(int y, int x);
+        bool userSetBlock(int y, int x);
 
         void availableBlocks();
 
@@ -22,11 +22,8 @@ class Blocks
     protected:
     Template playTemplate;
     Rules checkMove;
-    bool rotated = false;
 
     private:
-    int templatePicked;
-
     char blockbuffer;
     
     const char block1x4 = 'A';
@@ -55,6 +52,15 @@ class Blocks
     bool av22 = true;
     bool av33 = true;
     bool av34 = true;
+
+    bool av14rotated = false;
+    bool av15rotated = false;
+    bool av23rotated = false;
+    bool av24rotated = false;
+    bool av25rotated = false;
+    bool av22rotated = false;
+    bool av33rotated = false;
+    bool av34rotated = false;
 
     bool posOk = true;
 };

@@ -23,7 +23,7 @@ public:
 
     void printTemplate(int templateNumber);
 
-    void pasteToTemplate(int y, int x, char c, short blocksizeX, short blocksizeY);
+    void pasteToTemplate(int y, int x, char c, short blocksizeX, short blocksizeY, bool rotated);
 protected:
     char m_template[fieldsize][fieldsize];
     Field baseT1;   //static?
