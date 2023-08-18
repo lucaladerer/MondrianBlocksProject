@@ -3,7 +3,7 @@
 
 
 // Überprüfung auf Grenzüberschreitung oder Kollision
-bool Rules::checkLegalMove(char checkArray[8][8], int verPos, int horPos)
+bool Rules::checkLegalMove(char checkArray[][8], int verPos, int horPos)
 {
     // Indizes kleiner 0 oder größer 7?
     if(verPos < lowerLimit || verPos > upperLimit || horPos < lowerLimit || horPos > upperLimit)

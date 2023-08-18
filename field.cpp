@@ -56,11 +56,11 @@ void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, b
     legalMove = true;
 
     // Check auf Legal Move
-    if(~rotated)
+    if(!rotated)
     {
         for (int col = xPos; col < xPos + blocksizeX; col++) {
             for (int row = yPos; row < yPos + blocksizeY; row++) {
-                if (~checkRules.checkLegalMove(field, row, col)) {
+                if (!checkRules.checkLegalMove(field, row, col)) {
                     legalMove = false;
                     // Field::removeBlock(c)
                 }
@@ -71,7 +71,7 @@ void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, b
     {
         for (int col = xPos; col < xPos + blocksizeX; col++) {
             for (int row = yPos; row < yPos + blocksizeY; row++) {
-                if (~checkRules.checkLegalMove(field, col, row)) {
+                if (!checkRules.checkLegalMove(field, row, col)) {
                     legalMove = false;
                     // Field::removeBlock(c)
                 }
@@ -81,7 +81,7 @@ void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, b
 
     if(legalMove)
     {
-        if(~rotated)
+        if(!rotated)
         {
             for (int col = xPos; col < xPos + blocksizeX; col++) {
                 for (int row = yPos; row < yPos + blocksizeY; row++) {
@@ -98,7 +98,25 @@ void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, b
             }
         }
 
-        checkWin.checkForWin(field);
-        // Stats::turns++; Auskommentiert wegen Compilerfehler!
+        if(checkWin.checkForWin(field))
+        {
+            checkWin.winMessage();
+        }
+
+        // Stats::turns++;
+        // Auskommentiert wegen Compilerfehler!
     }
+}
+
+void Field::removeBlock(char c)
+{
+    for(int col = 0; col <=7; col++)
+    {
+        for(int row = 0; row <= 7; row++)
+        {
+            if(field[col][row] == c)
+            field[col][row] = '0';
+        }
+    }
+    // wieder zu availiableBlocks hinzufügen
 }

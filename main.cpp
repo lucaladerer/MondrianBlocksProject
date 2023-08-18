@@ -10,7 +10,10 @@ int main()
     startMenu.printIntroduction();
     startMenu.chooseGamemode();
 
-    int chosenTemplate = startMenu.chooseTemplate();
+    // while(playAgain)
+
+
+    static int chosenTemplate = startMenu.chooseTemplate();
 
     std::cout << chosenTemplate << std::endl;
 

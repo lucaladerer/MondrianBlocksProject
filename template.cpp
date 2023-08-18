@@ -26,9 +26,9 @@ void Template::template1()
     baseT1.editFieldForTemplate(7, 0);
     baseT1.editFieldForTemplate(7, 1);
     baseT1.editFieldForTemplate(7, 2);
-    baseT1.editFieldForTemplate(7, 0);
-    baseT1.editFieldForTemplate(6, 0);
+    baseT1.editFieldForTemplate(4, 0);
     baseT1.editFieldForTemplate(5, 0);
+    baseT1.editFieldForTemplate(6, 0);
 
     pickedTemplate = 1;
     // baseT1.printField();
@@ -118,115 +118,3 @@ void Template::pasteToTemplate(int y, int x, char c, short blocksizeX, short blo
         default: std::cout << "Error printing block via class: 'Template'" << std::endl; break;
     }
 }
-
-// Versuch mit std::array
-/*
-void Template::template1()
-{
-    cout << "Schwierigkeitsgrad: EINFACH\n" << endl;
-
-    for(int col = 0; col <= 7; col++)
-    {
-        for(int row = 0; row <= 7; row++)
-        {
-            m_testTemplate[col][row] = '0';
-        }
-    }
-
-
-    m_testTemplate[7][0] = 'X';
-    m_testTemplate[7][1] = 'X';
-    m_testTemplate[7][2] = 'X';
-    m_testTemplate[7][0] = 'X';
-    m_testTemplate[6][0] = 'X';
-    m_testTemplate[5][0] = 'X';
-    
-    
-    for(int col = 0; col <= 7; col++)
-    {
-        for(int row = 0; row <= 7; row++)
-        {
-            cout << m_testTemplate[col][row] << ' ';
-            if(row == 7)    
-            {
-                cout << endl;
-            }
-        }
-    }
-    cout << "\n" << endl;
-}
-
-
-
-void Template::template2()
-{
-    cout << "Schwierigkeitsgrad: MITTEL\n" << endl;
-
-    for(int col = 0; col <= 7; col++)
-    {
-        for(int row = 0; row <= 7; row++)
-        {
-            m_testTemplate[col][row] = '0';
-        }
-    }
-
-
-    m_testTemplate[7][5] = 'X';
-    m_testTemplate[7][6] = 'X';
-    m_testTemplate[7][7] = 'X';
-    m_testTemplate[0][6] = 'X';
-    m_testTemplate[0][7] = 'X';
-    m_testTemplate[0][0] = 'X';
-    
-    
-    for(int col = 0; col <= 7; col++)
-    {
-        for(int row = 0; row <= 7; row++)
-        {
-            cout << m_testTemplate[col][row] << ' ';
-            if(row == 7)    
-            {
-                cout << endl;
-            }
-        }
-    }
-    cout << "\n" << endl;
-}
-
-
-
-void Template::template3()
-{
-    cout << "Schwierigkeitsgrad: SCHWER\n" << endl;
-
-    for(int col = 0; col <= 7; col++)
-    {
-        for(int row = 0; row <= 7; row++)
-        {
-            m_testTemplate[col][row] = '0';
-        }
-    }
-
-    m_testTemplate[0][0] = 'X';
-    m_testTemplate[1][0] = 'X';
-    m_testTemplate[2][0] = 'X';
-    m_testTemplate[4][3] = 'X';
-    m_testTemplate[4][4] = 'X';
-    m_testTemplate[6][7] = 'X';
-    
-    
-    for(int col = 0; col <= 7; col++)
-    {
-        for(int row = 0; row <= 7; row++)
-        {
-            cout << m_testTemplate[col][row] << ' ';
-            if(row == 7)    
-            {
-                cout << endl;
-            }
-        }
-    }
-    cout << "\n" << endl;
-}
-
-*/

@@ -2,9 +2,10 @@
 #define WIN_HPP_INCLUDED
 
 #include "stats.hpp"
+#include "template.hpp"
 // #include "blocks.hpp"
 
-class Win : public Stats
+class Win : public Template, public Stats
 {
 public:
     static bool checkForWin(char checkArray[8][8]);

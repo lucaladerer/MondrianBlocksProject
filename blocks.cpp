@@ -119,7 +119,7 @@ bool Blocks::userSetBlock(int y, int x)
         }
         default: { std::cout << "Error setting Block due to rotation." << std::endl; return true; }
     }
-    /*if(~rotated)
+    /*if(!rotated)
     {
         switch(val)
         {
@@ -186,7 +186,7 @@ bool Blocks::rotateBlock(char yn)
         case 72: rotated = av34rotated; break;
         default: std::cout << "Error assigning rotation bool." << std::endl; break;
     }
-    if(~rotated)
+    if(!rotated)
     {
         if (yn == 'y' || yn == 'Y' || yn == 'j' || yn == 'J') {
             rotated = true;

@@ -25,6 +25,8 @@ public:
     void editFieldForTemplate(int y, int x);
 
     void setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, bool rotated);
+
+    void removeBlock(char c);
 protected:
     char field[mondrianFieldSize][mondrianFieldSize];
     Win checkWin;
