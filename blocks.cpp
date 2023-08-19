@@ -54,9 +54,10 @@ bool Blocks::userChooseBlock(char chosenBlock[3])
     return false;
 }
 
-bool Blocks::userSetBlock(int y, int x)
+int Blocks::userSetBlock(int y, int x)
 {
     bool rotated;
+    bool legalMove;
     int val = blockbuffer;
     short blocksizeX, blocksizeY;
     switch(val)
@@ -117,41 +118,15 @@ bool Blocks::userSetBlock(int y, int x)
             av34 = false;
             break;
         }
-        default: { std::cout << "Error setting Block due to rotation." << std::endl; return true; }
+        default: { std::cout << "Error setting Block due to rotation." << std::endl; return 1; }
     }
-    /*if(!rotated)
+    legalMove = playTemplate.pasteToTemplate(y, x, blockbuffer, blocksizeX, blocksizeY, rotated);
+    if (!legalMove)
     {
-        switch(val)
-        {
-            case 65: { blocksizeY = 1; blocksizeX = 4; av14 = false; break;}
-            case 66: { blocksizeY = 1; blocksizeX = 5; av15 = false; break;}
-            case 67: { blocksizeY = 2; blocksizeX = 3; av23 = false; break;}
-            case 68: { blocksizeY = 2; blocksizeX = 4; av24 = false; break;}
-            case 69: { blocksizeY = 2; blocksizeX = 5; av25 = false; break;}
-            case 70: { blocksizeY = 2; blocksizeX = 2; av22 = false; break;}
-            case 71: { blocksizeY = 3; blocksizeX = 3; av33 = false; break;}
-            case 72: { blocksizeY = 3; blocksizeX = 4; av34 = false; break;}
-            default: { std::cout << "Error setting Block" << std::endl; return true; }
-        }
+        std::cout << "Sie koennen diesen Block hier nicht setzen. Waehlen Sie erneut." << std::endl;
+        return 2;
     }
-    else if(rotated)
-    {
-        switch(val)
-        {
-            case 65: { blocksizeY = 4; blocksizeX = 1; av14 = false; break;}
-            case 66: { blocksizeY = 5; blocksizeX = 1; av15 = false; break;}
-            case 67: { blocksizeY = 3; blocksizeX = 2; av23 = false; break;}
-            case 68: { blocksizeY = 4; blocksizeX = 2; av24 = false; break;}
-            case 69: { blocksizeY = 5; blocksizeX = 2; av25 = false; break;}
-            case 70: { blocksizeY = 2; blocksizeX = 2; av22 = false; break;}
-            case 71: { blocksizeY = 3; blocksizeX = 3; av33 = false; break;}
-            case 72: { blocksizeY = 4; blocksizeX = 3; av34 = false; break;}
-            default: { std::cout << "Error setting Block" << std::endl; return true; }
-        }
-    }
-    else return true;*/
-    playTemplate.pasteToTemplate(y, x, blockbuffer, blocksizeX, blocksizeY, rotated);
-    return false;
+    return 0;
 }
 
 
@@ -240,4 +215,46 @@ bool Blocks::rotateBlock(char yn)
         }
     }
     else return true;
+}
+
+int Blocks::deleteBlock()
+{
+    std::cout << "Moechten Sie einen Block loeschen (y) oder setzen (n)" << std::endl;
+    char removeYN;
+    std::cin >> removeYN;
+    if(removeYN == 'y' || removeYN == 'Y')
+    {
+        std::cout << "\nWelchen Block moechten Sie loeschen? Geben Sie den Buchstaben des Blocks ein." << std::endl;
+        char blockToRemove;
+        std::cin >> blockToRemove;
+        playTemplate.removeFromTemplate(blockToRemove);
+        int val = blockToRemove;
+        switch(val)
+        {
+            case 65: case 97: av14 = true; break;
+            case 66: case 98: av15 = true; break;
+            case 67: case 99: av23 = true; break;
+            case 68: case 100: av24 = true; break;
+            case 69: case 101: av25 = true; break;
+            case 70: case 102: av22 = true; break;
+            case 71: case 103: av33 = true; break;
+            case 72: case 104: av34 = true; break;
+            default: std::cout << "Bitte waehlen Sie erneut." << std::endl; return 1;
+        }
+        return 2;
+    }
+    else if(removeYN == 'n' || removeYN == 'N')
+    {
+        return 0;
+    }
+    else
+    {
+        std::cout << "Bitte waehlen Sie erneut." << std::endl;
+        return 1;
+    }
+}
+
+void Blocks::printFinalField()
+{
+    playTemplate.printFinal();
 }

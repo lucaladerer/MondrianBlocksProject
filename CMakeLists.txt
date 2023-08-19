@@ -9,8 +9,8 @@ add_executable(MondrianBlocksProject
         field.cpp
         field.hpp
         main.cpp
-        menu.cpp
         menu.hpp
+        menu.cpp
         rules.cpp
         rules.hpp
         stats.cpp
@@ -20,4 +20,5 @@ add_executable(MondrianBlocksProject
         win.cpp
         win.hpp
         blocks.cpp
-        blocks.hpp)
+        blocks.hpp
+)

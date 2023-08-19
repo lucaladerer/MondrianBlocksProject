@@ -2,9 +2,8 @@
 #define BLOCKS_HPP_INCLUDED
 
 #include "template.hpp"
-#include "rules.hpp"
 
-class Blocks
+class Blocks : public Template
 {
     public:
         Blocks();
@@ -14,14 +13,17 @@ class Blocks
 
         bool userChooseBlock(char chosenBlock[3]);
 
-        bool userSetBlock(int y, int x);
+        int userSetBlock(int y, int x);
 
         void availableBlocks();
 
         bool rotateBlock(char yn);
+
+        int deleteBlock();
+
+        void printFinalField();
     protected:
     Template playTemplate;
-    Rules checkMove;
 
     private:
     char blockbuffer;

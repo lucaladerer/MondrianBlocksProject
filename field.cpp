@@ -14,7 +14,6 @@ void Field::createField()
     }
 }
 
-
 // Hier wird das Feld in der Konsole ausgegeben. Zwischen den Elementen (Reihe) wird ein Leerzeichen gesetzt.
 void Field::printField()
 {
@@ -39,19 +38,10 @@ void Field::editFieldForTemplate(int y, int x)
     field[y][x] = 'X';
 }
 
-void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, bool rotated)
+bool Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, bool rotated)
 {
     int xPos = x - 1;
     int yPos = y - 1;
-    short temp;
-
-    // Für Rotation von Block
-    // if(rotateBlock)
-    // {
-    //     temp = blocksizeX;
-    //     blocksizeX = blocksizeY;
-    //     blocksizeY = temp;
-    // }
 
     legalMove = true;
 
@@ -105,7 +95,9 @@ void Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, b
 
         // Stats::turns++;
         // Auskommentiert wegen Compilerfehler!
+        return true;
     }
+    else return false;
 }
 
 void Field::removeBlock(char c)
@@ -118,5 +110,4 @@ void Field::removeBlock(char c)
             field[col][row] = '0';
         }
     }
-    // wieder zu availiableBlocks hinzufügen
 }

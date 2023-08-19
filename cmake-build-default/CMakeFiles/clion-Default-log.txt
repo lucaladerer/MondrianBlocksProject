@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\x64\bin\cmake.exe" "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\kevin\Documents\Code\MondrianBlocksProject -B C:\Users\kevin\Documents\Code\MondrianBlocksProject\cmake-build-default
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/kevin/Documents/Code/MondrianBlocksProject/cmake-build-default
+"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S E:\Documents\GitHub\MondrianBlocksProject -B E:\Documents\GitHub\MondrianBlocksProject\cmake-build-default
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: E:/Documents/GitHub/MondrianBlocksProject/cmake-build-default

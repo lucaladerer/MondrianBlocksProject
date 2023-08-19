@@ -108,13 +108,35 @@ void Template::printTemplate(int templateNumber)
     }
 }
 
-void Template::pasteToTemplate(int y, int x, char c, short blocksizeX, short blocksizeY, bool rotated)
+bool Template::pasteToTemplate(int y, int x, char c, short blocksizeX, short blocksizeY, bool rotated)
+{
+    bool pasteSuccess;
+    switch(pickedTemplate)
+    {
+        case 1: { pasteSuccess = baseT1.setBlock(y, x, c, blocksizeX, blocksizeY, rotated); baseT1.printField(); break; }
+        case 2: { pasteSuccess = baseT2.setBlock(y, x, c, blocksizeX, blocksizeY, rotated); baseT2.printField(); break; }
+        case 3: { pasteSuccess = baseT3.setBlock(y, x, c, blocksizeX, blocksizeY, rotated); baseT3.printField(); break; }
+        default: std::cout << "Error printing block via class: 'Template'" << std::endl; return false;
+    }
+    return pasteSuccess;
+}
+
+void Template::removeFromTemplate(char c)
 {
     switch(pickedTemplate)
     {
-        case 1: { baseT1.setBlock(y, x, c, blocksizeX, blocksizeY, rotated); baseT1.printField(); break; }
-        case 2: { baseT2.setBlock(y, x, c, blocksizeX, blocksizeY, rotated); baseT2.printField(); break; }
-        case 3: { baseT3.setBlock(y, x, c, blocksizeX, blocksizeY, rotated); baseT3.printField(); break; }
-        default: std::cout << "Error printing block via class: 'Template'" << std::endl; break;
+        case 1: baseT1.removeBlock(c); break;
+        case 2: baseT2.removeBlock(c); break;
+        case 3: baseT3.removeBlock(c); break;
+    }
+}
+
+void Template::printFinal()
+{
+    switch(pickedTemplate)
+    {
+        case 1: baseT1.printField(); break;
+        case 2: baseT2.printField(); break;
+        case 3: baseT3.printField(); break;
     }
 }
