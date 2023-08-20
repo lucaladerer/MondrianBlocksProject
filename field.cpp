@@ -59,8 +59,8 @@ bool Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, b
     }
     else if(rotated)
     {
-        for (int col = xPos; col < xPos + blocksizeX; col++) {
-            for (int row = yPos; row < yPos + blocksizeY; row++) {
+        for (int col = xPos; col < xPos + blocksizeY; col++) {
+            for (int row = yPos; row < yPos + blocksizeX; row++) {
                 if (!checkRules.checkLegalMove(field, row, col)) {
                     legalMove = false;
                     // Field::removeBlock(c)

@@ -17,19 +17,25 @@ void Menu::printIntroduction()
 // Hier wird der Spielmodus ausgewählt. Der Solver ist hier nicht spielbar, aber für die Vollständigkeit trotzdem vorhanden
 bool Menu::chooseGamemode()
 {
+    char tempMode;
     std::cout << "Waehlen Sie einen Spielmodus:\n(1) - Spielen\n(2) - Solver" << std::endl;
-    std::cin >> m_gamemode;
+    std::cin >> tempMode;
     std::cout << std::endl;
 
-    switch (m_gamemode)
+    switch (tempMode)
     {
-    //bool 0 = Spielen, bool 1 = Soler
-    case 1:
+    //bool 0 = Spielen, bool 1 = Solver
+    case '1':
         std::cout << "Sie haben sich fuer den Spielmodus 'Spielen' entschieden!" << std::endl;
-        return 0;
-    case 2:
+        m_gamemode = 1;
+        return false;
+    case '2':
         std::cout << "\n*WIP* ... Work In Progress ... *WIP*\t\tWaehlen Sie erneut!\n" << std::endl;
-        return chooseGamemode();
+        m_gamemode = 2;
+        return true;
+    default:
+        std::cout << "Wrong input, please choose again (type in 1 or 2)." << std::endl;
+        return true;
     }
 }
 
@@ -37,7 +43,6 @@ bool Menu::chooseGamemode()
 int Menu::chooseTemplate()
 {
     std::cout << "Folgende Vorlagen stehen zur Verfuegung\n" << std::endl;
-    
     std::cout << "Vorlage No.1:" << std::endl;
     template1.template1();
     template1.printTemplate(1);
@@ -51,28 +56,31 @@ int Menu::chooseTemplate()
     template3.printTemplate(3);
 
     std::cout << "Waehlen Sie nun eine Vorlage aus:\t";
-    std::cin >> m_chosenTemplate;
-
-    switch (m_chosenTemplate)
+    char tempPick;
+    std::cin >> tempPick;
+    switch (tempPick)
     {
-        case 1:
+        case '1':
             std::cout << "Sie haben sich fuer Vorlage No.1 entschieden." << std::endl;
+            m_chosenTemplate = 1;
             // baseT1.printField();
             return 1;
         
-        case 2:
+        case '2':
             std::cout << "Sie haben sich fuer Vorlage No.2 entschieden." << std::endl;
+            m_chosenTemplate = 2;
             // baseT2.printField();
             return 2;
         
-        case 3:
+        case '3':
             std::cout << "Sie haben sich fuer Vorlage No.3 entschieden." << std::endl;
+            m_chosenTemplate = 3;
             // baseT3.printField();
             return 3;
         
         default:
             std::cout << "\n*Ungueltige Eingabe! Waehlen Sie erneut*\n\n" << std::endl;
-            chooseTemplate();
+            return 0;
     }
     
 }

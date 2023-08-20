@@ -227,18 +227,26 @@ int Blocks::deleteBlock()
         std::cout << "\nWelchen Block moechten Sie loeschen? Geben Sie den Buchstaben des Blocks ein." << std::endl;
         char blockToRemove;
         std::cin >> blockToRemove;
+        if(blockToRemove == 'a') blockToRemove = 'A';
+        else if(blockToRemove == 'b') blockToRemove = 'B';
+        else if(blockToRemove == 'c') blockToRemove = 'C';
+        else if(blockToRemove == 'd') blockToRemove = 'D';
+        else if(blockToRemove == 'e') blockToRemove = 'E';
+        else if(blockToRemove == 'f') blockToRemove = 'F';
+        else if(blockToRemove == 'g') blockToRemove = 'G';
+        else if(blockToRemove == 'h') blockToRemove = 'H';
         playTemplate.removeFromTemplate(blockToRemove);
         int val = blockToRemove;
         switch(val)
         {
-            case 65: case 97: av14 = true; break;
-            case 66: case 98: av15 = true; break;
-            case 67: case 99: av23 = true; break;
-            case 68: case 100: av24 = true; break;
-            case 69: case 101: av25 = true; break;
-            case 70: case 102: av22 = true; break;
-            case 71: case 103: av33 = true; break;
-            case 72: case 104: av34 = true; break;
+            case 65: av14 = true; break;
+            case 66: av15 = true; break;
+            case 67: av23 = true; break;
+            case 68: av24 = true; break;
+            case 69: av25 = true; break;
+            case 70: av22 = true; break;
+            case 71: av33 = true; break;
+            case 72: av34 = true; break;
             default: std::cout << "Bitte waehlen Sie erneut." << std::endl; return 1;
         }
         return 2;
