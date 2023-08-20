@@ -91,7 +91,7 @@ int main()
             int setBlockRequest = 1;
             // while the input was spelled wrong
             while (setBlockRequest == 1) {
-                // Zeile geht über Bildschirm hinaus um Leserlichkeit zu verbessern / Textausgabe nicht für Verständnis vom Code relevant
+                // line is longer than screen to simplify reading the code since it's not relevant for understanding the code
                 std::cout
                         << "Where do you want to place your block?\nEnter the horizontal position first, then the vertical position.\nPositions go from 1-8, counted from left to right / top to bottom."
                         << std::endl;
