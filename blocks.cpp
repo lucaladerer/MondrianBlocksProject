@@ -27,7 +27,7 @@ bool Blocks::userChooseBlock(char chosenBlock[3])
         {
             case 52: { blockbuffer = block1x4; break; }
             case 53: { blockbuffer = block1x5; break; }
-            default: { std::cout << "Bitte waehlen Sie erneut ihren Block" << std::endl; return true;}
+            default: { std::cout << "Please choose your block again." << std::endl; return true;}
         }
     }
     else if(block0 == 50)
@@ -38,7 +38,7 @@ bool Blocks::userChooseBlock(char chosenBlock[3])
             case 51: { blockbuffer = block2x3; break; }
             case 52: { blockbuffer = block2x4; break; }
             case 53: { blockbuffer = block2x5; break; }
-            default: { std::cout << "Bitte waehlen Sie erneut ihren Block" << std::endl; return true;}
+            default: { std::cout << "Please choose your block again." << std::endl; return true;}
         }
     }
     else if(block0 == 51)
@@ -47,10 +47,10 @@ bool Blocks::userChooseBlock(char chosenBlock[3])
         {
             case 51: { blockbuffer = block3x3; break; }
             case 52: { blockbuffer = block3x4; break; }
-            default: { std::cout << "Bitte waehlen Sie erneut ihren Block" << std::endl; return true; }
+            default: { std::cout << "Please choose your block again." << std::endl; return true; }
         }
     }
-    else { std::cout << "Bitte waehlen Sie erneut ihren Block." << std::endl; return true; }
+    else { std::cout << "Please choose your block again." << std::endl; return true; }
     return false;
 }
 
@@ -123,7 +123,7 @@ int Blocks::userSetBlock(int y, int x)
     legalMove = playTemplate.pasteToTemplate(y, x, blockbuffer, blocksizeX, blocksizeY, rotated);
     if (!legalMove)
     {
-        std::cout << "Sie koennen diesen Block hier nicht setzen. Waehlen Sie erneut." << std::endl;
+        std::cout << "You can't place your block there. Please choose a new position." << std::endl;
         return 2;
     }
     return 0;
@@ -132,7 +132,7 @@ int Blocks::userSetBlock(int y, int x)
 
 void Blocks::availableBlocks()
 {
-    std::cout << "Verfuegbare Bloecke:" << std::endl;
+    std::cout << "Available blocks:" << std::endl;
     if(av14) std::cout << "A: 1x4   ";
     if(av15) std::cout << "B: 1x5   ";
     if(av23) std::cout << "C: 2x3   ";
@@ -185,7 +185,7 @@ bool Blocks::rotateBlock(char yn)
         }
         else
         {
-            std::cout << "Falsche Eingabe. Versuchen Sie es erneut." << std::endl;
+            std::cout << "Wrong input. Please try again." << std::endl;
             return true;
         }
     }
@@ -210,7 +210,7 @@ bool Blocks::rotateBlock(char yn)
             rotated = true;
             return false;
         } else {
-            std::cout << "Falsche Eingabe. Versuchen Sie es erneut." << std::endl;
+            std::cout << "Wrong input. Please try again." << std::endl;
             return true;
         }
     }
@@ -219,12 +219,12 @@ bool Blocks::rotateBlock(char yn)
 
 int Blocks::deleteBlock()
 {
-    std::cout << "Moechten Sie einen Block loeschen (y) oder setzen (n)" << std::endl;
+    std::cout << "Do you want to delete (y) or place (n) a block?" << std::endl;
     char removeYN;
     std::cin >> removeYN;
     if(removeYN == 'y' || removeYN == 'Y')
     {
-        std::cout << "\nWelchen Block moechten Sie loeschen? Geben Sie den Buchstaben des Blocks ein." << std::endl;
+        std::cout << "\nWhich block do you want to delete? Enter the letter of the block." << std::endl;
         char blockToRemove;
         std::cin >> blockToRemove;
         if(blockToRemove == 'a') blockToRemove = 'A';
@@ -247,7 +247,7 @@ int Blocks::deleteBlock()
             case 70: av22 = true; break;
             case 71: av33 = true; break;
             case 72: av34 = true; break;
-            default: std::cout << "Bitte waehlen Sie erneut." << std::endl; return 1;
+            default: std::cout << "Wrong input. Please try again." << std::endl; return 1;
         }
         return 2;
     }
@@ -257,7 +257,7 @@ int Blocks::deleteBlock()
     }
     else
     {
-        std::cout << "Bitte waehlen Sie erneut." << std::endl;
+        std::cout << "Wrong input. Please try again." << std::endl;
         return 1;
     }
 }

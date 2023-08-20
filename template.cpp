@@ -20,7 +20,7 @@ Template::~Template() {};
 // Über diese Funktion wird das leere Feld erstellt und mit den entsprechenen Kreuzen gefüllt.
 void Template::template1()
 {
-    std::cout << "Schwierigkeitsgrad: EINFACH\n" << std::endl;
+    std::cout << "Difficulty: EASY\n" << std::endl;
 
     baseT1.createField();
     baseT1.editFieldForTemplate(7, 0);
@@ -44,7 +44,7 @@ void Template::template1()
 // Über diese Funktion wird das leere Feld erstellt und mit den entsprechenen Kreuzen gefüllt.
 void Template::template2()
 {
-    std::cout << "Schwierigkeitsgrad: MITTEL\n" << std::endl;
+    std::cout << "Difficulty: MEDIUM\n" << std::endl;
 
     baseT2.createField();
     baseT2.editFieldForTemplate(7, 5);
@@ -69,7 +69,7 @@ void Template::template2()
 // Über diese Funktion wird das leere Feld erstellt und mit den entsprechenen Kreuzen gefüllt.
 void Template::template3()
 {
-    std::cout << "Schwierigkeitsgrad: SCHWER\n" << std::endl;
+    std::cout << "Difficulty: HARD\n" << std::endl;
 
     baseT3.createField();
     baseT3.editFieldForTemplate(0, 0);

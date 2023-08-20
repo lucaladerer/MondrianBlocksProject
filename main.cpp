@@ -64,7 +64,7 @@ int main()
             // print the blocks available to set to console
             userblocks.availableBlocks();
             while (userChooseBlockRequest) {
-                std::cout << "Welchen Block moechten Sie setzen? Geben Sie bspw. '3x4' ein" << std::endl;
+                std::cout << "Which block do you want to set? For example enter '3x4'" << std::endl;
                 // store the picked block in char blockPicked[3]
                 std::cin >> blockPicked;
                 std::cout << std::endl;
@@ -76,7 +76,7 @@ int main()
             // create char to save user input
             char rotateInput;
             while (rotateRequest) {
-                std::cout << "Moechten Sie den Block drehen?\nGeben Sie ein 'y' fuer Ja oder 'n' fuer nein."
+                std::cout << "Do you want to rotate your picked block?\nEnter 'y' for yes or 'n' for no."
                           << std::endl;
                 // store input in char rotateInput
                 std::cin >> rotateInput;
@@ -93,7 +93,7 @@ int main()
             while (setBlockRequest == 1) {
                 // Zeile geht über Bildschirm hinaus um Leserlichkeit zu verbessern / Textausgabe nicht für Verständnis vom Code relevant
                 std::cout
-                        << "Wo moechten Sie den Block platzieren?\nGeben Sie zuerst die horizontale Position ein, dann die vertikale Position.\nPositionen vom 1-8, gezaehlt von links nach rechts bzw. oben nach unten."
+                        << "Where do you want to place your block?\nEnter the horizontal position first, then the vertical position.\nPositions go from 1-8, counted from left to right / top to bottom."
                         << std::endl;
                 // create integers for block position
                 int x, y;
