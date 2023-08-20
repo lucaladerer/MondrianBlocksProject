@@ -1,8 +1,11 @@
 #include "menu.hpp"
 #include "blocks.hpp"
 #include "win.hpp"
-// #include "field.hpp"
+#include "stats.hpp"
 #include <iostream>
+
+// create boolean to repeat asking for user input while template is unresolved
+static bool unresolved = true;
 
 int main()
 {
@@ -18,6 +21,8 @@ int main()
         // make the user choose a gamemode and initialize chooseGamemodeRequest with return value from startMenu.chooseGamemode()
         chooseGamemodeRequest = startMenu.chooseGamemode();
     }
+
+    // while(playAgain)
 
     // create static int to store the picked template
     static int chosenTemplate;
@@ -36,11 +41,12 @@ int main()
     // set picked template in Object userblocks
     userblocks.setPlayTemplate(chosenTemplate);
 
-    // create boolean to repeat asking for user input while template is unresolved
-    bool unresolved = true;
+    Stats::startTimer();
+
     while(unresolved)
     {
         while(true) {
+            // create goto position
             // create char for saving the block picked by the user
             char blockPicked[3];
             // create int to check if the user decided to remove a block correctly
@@ -78,16 +84,14 @@ int main()
                 // store input in char rotateInput
                 std::cin >> rotateInput;
                 std::cout << std::endl;
-                if (rotateInput == 'y' || rotateInput == 'Y' || rotateInput == 'j' || rotateInput == 'J') {
-                    bool rotateBlock = true;
-                }
                 // pass user input through to object userblocks to rotate block, store return value in rotateRequest
                 rotateRequest = userblocks.rotateBlock(rotateInput);
             }
             // create integer to check if user typed in correct block coordinates
             int setBlockRequest = 1;
             // while the input was spelled wrong
-            while (setBlockRequest == 1) {
+            while (setBlockRequest == 1)
+            {
                 // line is longer than screen to simplify reading the code since it's not relevant for understanding the code
                 std::cout
                         << "Where do you want to place your block?\nEnter the horizontal position first, then the vertical position.\nPositions go from 1-8, counted from left to right / top to bottom."
@@ -98,11 +102,21 @@ int main()
                 std::cin >> x >> y;
                 // set the users selected block to desired position y and x and save return value in setBlockRequest
                 setBlockRequest = userblocks.userSetBlock(y, x);
+                Stats::turns++;
+                // if the block selected by the user doesn't fit in the field anymore go back to the beginning of while(unresolved) loop
+                if (setBlockRequest == 2)
+                    {
+                        break;
+                    }
             }
-            // if the block selected by the user doesn't fit in the field anymore go back to the beginning of while(unresolved) loop
-            if (setBlockRequest == 2) break;
+            if(Win::winCondition)
+                {
+                    unresolved = false;
+                    break;
+                }
+
         }
     }
-    userblocks.printFinalField();
+    // userblocks.printFinalField();
     return 0;
 }

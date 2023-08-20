@@ -4,7 +4,7 @@
 Template::Template() {};
 Template::~Template() {};
 
-// Über diese Funktion wird das leere Feld erstellt und mit den entsprechenen Kreuzen gefüllt.
+// create an empty field and fill it with chosen crosses --> Template No.1
 void Template::template1()
 {
     std::cout << "Difficulty: EASY\n" << std::endl;
@@ -20,7 +20,7 @@ void Template::template1()
     pickedTemplate = 1;
 }
 
-// Über diese Funktion wird das leere Feld erstellt und mit den entsprechenen Kreuzen gefüllt.
+// create an empty field and fill it with chosen crosses --> Template No.2
 void Template::template2()
 {
     std::cout << "Difficulty: MEDIUM\n" << std::endl;
@@ -36,8 +36,7 @@ void Template::template2()
     pickedTemplate = 2;
 }
 
-
-// Über diese Funktion wird das leere Feld erstellt und mit den entsprechenen Kreuzen gefüllt.
+// create an empty field and fill it with chosen crosses --> Template No.3
 void Template::template3()
 {
     std::cout << "Difficulty: HARD\n" << std::endl;
@@ -54,7 +53,7 @@ void Template::template3()
 }
 
 
-// Über diese Funktion wird das entsprechende Template in der Konsole ausgegeben.
+// template is printed to the console
 void Template::printTemplate(int templateNumber)
 {
     switch (templateNumber)

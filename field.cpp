@@ -15,10 +15,7 @@ void Field::createField()
         arraySize.close();
     }
     // if the file couldn't be opened, print error message
-    else std::cout << "Could not open txt file." << std::endl;
-    // assign input values from .txt file in variables for the size of char array field[][]
-    // mondrianFieldSizeY = fieldsizetxt[0] - 48;
-    // mondrianFieldSizeX = fieldsizetxt[2] - 48;
+    // else std::cout << "Could not open txt file." << std::endl;
     // fill the start array with zeroes
     for(int col = 0; col <= 7; col++)
     {
@@ -118,6 +115,7 @@ bool Field::setBlock(int y, int x, char c, short blocksizeX, short blocksizeY, b
         // if the method of Class Win returns true, which means that the field is completed, print the win message to console
         if(checkWin.checkForWin(field))
         {
+            Stats::endTimer();
             checkWin.winMessage();
         }
 

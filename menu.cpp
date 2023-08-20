@@ -2,7 +2,7 @@
 #include <string> 
 #include "menu.hpp"
 
-// Hier wird die Einleitung ausgegeben
+// print the Introduction
 void Menu::printIntroduction()
 {
     std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
@@ -14,7 +14,7 @@ void Menu::printIntroduction()
     std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" << std::endl;
 }
 
-// Hier wird der Spielmodus ausgewählt. Der Solver ist hier nicht spielbar, aber für die Vollständigkeit trotzdem vorhanden
+// Here you choose the gamemode. Solver is not playable but choosable in the Menu  (WIP)
 bool Menu::chooseGamemode()
 {
     char tempMode;
@@ -24,7 +24,7 @@ bool Menu::chooseGamemode()
 
     switch (tempMode)
     {
-    //bool 0 = Spielen, bool 1 = Solver
+    //bool 0 = play; bool 1 = Solver
     case '1':
         std::cout << "You chose the gamemode 'Play'!" << std::endl;
         m_gamemode = 1;
@@ -33,15 +33,16 @@ bool Menu::chooseGamemode()
         std::cout << "\n*WIP* ... Work In Progress ... *WIP*\t\tPlease pick again!\n" << std::endl;
         m_gamemode = 2;
         return true;
-    default:
+    default:    //wrong input
         std::cout << "Wrong input, please choose again (type in 1 or 2)." << std::endl;
         return true;
     }
 }
 
-// Hier werden 3 Vorlagen in der Konsole ausgegeben. Im Anschluss wird über den Input die Vorlage ausgewählt.
+// 3 different Templates will be printed to the console. Template will be chosen through user input.
 int Menu::chooseTemplate()
 {
+    // print templates to choose
     std::cout << "Choose from one of the following templates:\n" << std::endl;
     std::cout << "Template No.1:" << std::endl;
     template1.template1();
@@ -55,6 +56,7 @@ int Menu::chooseTemplate()
     template3.template3();
     template3.printTemplate(3);
 
+    // user input + return what template you chose
     std::cout << "Pick your template:\t";
     char tempPick;
     std::cin >> tempPick;
@@ -63,19 +65,16 @@ int Menu::chooseTemplate()
         case '1':
             std::cout << "You picked template No.1." << std::endl;
             m_chosenTemplate = 1;
-            // baseT1.printField();
             return 1;
         
         case '2':
             std::cout << "You picked template No.2." << std::endl;
             m_chosenTemplate = 2;
-            // baseT2.printField();
             return 2;
         
         case '3':
             std::cout << "You picked template No.3." << std::endl;
             m_chosenTemplate = 3;
-            // baseT3.printField();
             return 3;
         
         default:
