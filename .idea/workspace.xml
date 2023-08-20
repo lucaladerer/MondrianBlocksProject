@@ -24,13 +24,12 @@
     <list default="true" id="2cc86fd3-8149-48b9-832f-e20eec1c4abe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/blocks.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/blocks.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/menu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/rules.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/field.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/field.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/field.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/template.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/win.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +58,9 @@
     <option name="majorVersion" value="2022" />
     <option name="minorVersion" value="3.2" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: -1
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="2TfFDJZYtaeOFjpf0DLR2IYg5qC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -77,7 +75,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Documents/GitHub/MondrianBlocksProject&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Documents/DHBW/C++/txttest.cpp&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -132,7 +130,8 @@
       <workItem from="1692455750193" duration="2724000" />
       <workItem from="1692461911437" duration="60000" />
       <workItem from="1692464363064" duration="3360000" />
-      <workItem from="1692522823657" duration="3918000" />
+      <workItem from="1692522823657" duration="4748000" />
+      <workItem from="1692531848138" duration="8803000" />
     </task>
     <servers />
   </component>
