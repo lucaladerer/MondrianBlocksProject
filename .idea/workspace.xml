@@ -24,6 +24,8 @@
     <list default="true" id="2cc86fd3-8149-48b9-832f-e20eec1c4abe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/template.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/template.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +127,7 @@
       <workItem from="1692461911437" duration="60000" />
       <workItem from="1692464363064" duration="3360000" />
       <workItem from="1692522823657" duration="4748000" />
-      <workItem from="1692531848138" duration="9085000" />
+      <workItem from="1692531848138" duration="10662000" />
     </task>
     <servers />
   </component>

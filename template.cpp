@@ -1,19 +1,6 @@
 #include "template.hpp"
 #include <iostream>
 
-// Array als Rückgabewert, dann muss array nicht immer neu in template1() etc. erstellt werden
-// Lösung: std::arry
-// void Template::templateEmpty()
-// {
-//     for(int col = 0; col <= 7; col++)
-//     {
-//         for(int row = 0; row <= 7; row++)
-//         {
-//             m_template[col][row] = '0';
-//         }
-//     }   
-// }
-
 Template::Template() {};
 Template::~Template() {};
 
@@ -31,14 +18,6 @@ void Template::template1()
     baseT1.editFieldForTemplate(6, 0);
 
     pickedTemplate = 1;
-    // baseT1.printField();
-
-    // baseT1.field[7][0] = 'X';
-    // baseT1.field[7][1] = 'X';
-    // baseT1.field[7][2] = 'X';
-    // baseT1.field[7][0] = 'X';
-    // baseT1.field[6][0] = 'X';
-    // baseT1.field[5][0] = 'X';
 }
 
 // Über diese Funktion wird das leere Feld erstellt und mit den entsprechenen Kreuzen gefüllt.
@@ -55,14 +34,6 @@ void Template::template2()
     baseT2.editFieldForTemplate(0, 0);
 
     pickedTemplate = 2;
-    // baseT2.printField();
-
-    // m_template[7][5] = 'X';
-    // m_template[7][6] = 'X';
-    // m_template[7][7] = 'X';
-    // m_template[0][6] = 'X';
-    // m_template[0][7] = 'X';
-    // m_template[0][0] = 'X';   
 }
 
 
@@ -80,14 +51,6 @@ void Template::template3()
     baseT3.editFieldForTemplate(6, 7);
 
     pickedTemplate = 3;
-    // baseT3.printField();
-
-    // m_template[0][0] = 'X';
-    // m_template[1][0] = 'X';
-    // m_template[2][0] = 'X';
-    // m_template[4][3] = 'X';
-    // m_template[4][4] = 'X';
-    // m_template[6][7] = 'X';
 }
 
 

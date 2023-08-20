@@ -19,8 +19,6 @@ int main()
         chooseGamemodeRequest = startMenu.chooseGamemode();
     }
 
-    // while(playAgain)
-
     // create static int to store the picked template
     static int chosenTemplate;
     // ask user for template pick and create Object from Class field > template, save return value in static int ( 1 || 2 || 3)
@@ -43,7 +41,6 @@ int main()
     while(unresolved)
     {
         while(true) {
-            // create goto position
             // create char for saving the block picked by the user
             char blockPicked[3];
             // create int to check if the user decided to remove a block correctly

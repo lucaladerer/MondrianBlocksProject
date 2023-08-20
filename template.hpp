@@ -11,9 +11,6 @@ class Template : public Field
 public:
     Template();
     virtual ~Template();
-    // Array als Rückgabewert, dann muss array nicht immer neu in template1() etc. erstellt werden
-    // Lösung: std::array
-    // char templateEmpty();
     
     void template1();
 
@@ -35,8 +32,6 @@ protected:
     Field baseT3;
     short pickedTemplate;
 
-    // Versuch mit std::array
-    // std::array<std::array<char, fieldsize>, fieldsize> m_testTemplate;
 };
 
 #endif  // TEMPLATE_HPP_INCLUDED
