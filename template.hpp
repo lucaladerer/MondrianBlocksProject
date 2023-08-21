@@ -2,7 +2,6 @@
 #define TEMPLATE_HPP_INCLUDED
 
 #include "field.hpp"
-// #include <array>
 const int fieldsize = 8;
 const char emptyElement = '0';
 
@@ -27,11 +26,10 @@ public:
     void printFinal();
 protected:
     char m_template[fieldsize][fieldsize];
-    Field baseT1;   //static?
+    Field baseT1;
     Field baseT2;
     Field baseT3;
     short pickedTemplate;
-
 };
 
 #endif  // TEMPLATE_HPP_INCLUDED
