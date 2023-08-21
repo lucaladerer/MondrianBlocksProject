@@ -1,2 +1,2 @@
-MondrianBlocksTests 1 0.201843
+MondrianBlocksTests 2 0.15559
 ---

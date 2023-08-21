@@ -9,6 +9,7 @@ set(
         Test_Sources
         blockTest.cpp
         templateTest.cpp
+        fieldTest.cpp
 )
 
 add_executable(

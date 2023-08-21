@@ -208,6 +208,30 @@ blockTest.cpp.s:
 	cd /d C:\Users\kevin\Documents\Code\MondrianBlocksProject\build && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\MondrianBlocksTests.dir\build.make test/CMakeFiles/MondrianBlocksTests.dir/blockTest.cpp.s
 .PHONY : blockTest.cpp.s
 
+fieldTest.obj: fieldTest.cpp.obj
+.PHONY : fieldTest.obj
+
+# target to build an object file
+fieldTest.cpp.obj:
+	cd /d C:\Users\kevin\Documents\Code\MondrianBlocksProject\build && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\MondrianBlocksTests.dir\build.make test/CMakeFiles/MondrianBlocksTests.dir/fieldTest.cpp.obj
+.PHONY : fieldTest.cpp.obj
+
+fieldTest.i: fieldTest.cpp.i
+.PHONY : fieldTest.i
+
+# target to preprocess a source file
+fieldTest.cpp.i:
+	cd /d C:\Users\kevin\Documents\Code\MondrianBlocksProject\build && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\MondrianBlocksTests.dir\build.make test/CMakeFiles/MondrianBlocksTests.dir/fieldTest.cpp.i
+.PHONY : fieldTest.cpp.i
+
+fieldTest.s: fieldTest.cpp.s
+.PHONY : fieldTest.s
+
+# target to generate assembly for a file
+fieldTest.cpp.s:
+	cd /d C:\Users\kevin\Documents\Code\MondrianBlocksProject\build && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\MondrianBlocksTests.dir\build.make test/CMakeFiles/MondrianBlocksTests.dir/fieldTest.cpp.s
+.PHONY : fieldTest.cpp.s
+
 templateTest.obj: templateTest.cpp.obj
 .PHONY : templateTest.obj
 
@@ -249,6 +273,9 @@ help:
 	@echo ... blockTest.obj
 	@echo ... blockTest.i
 	@echo ... blockTest.s
+	@echo ... fieldTest.obj
+	@echo ... fieldTest.i
+	@echo ... fieldTest.s
 	@echo ... templateTest.obj
 	@echo ... templateTest.i
 	@echo ... templateTest.s

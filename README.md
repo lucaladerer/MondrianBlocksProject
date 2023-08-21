@@ -7,10 +7,12 @@ Study project MondrianBlocks by Luca Laderer and Kevin Lücke
 ### Wie wird das Programm gestartet / How to execute?
 Führen Sie die start_project.bat Datei aus.
 Funktioniert mit dem g++ Compiler.
+Um das Projekt mit CMake kompilieren zu können, befinden sich entsprechende CMakeLists.txt Dateien im Repository. Wenn Sie lediglich das Programm (Spiel) selbst kompilieren möchten, öffnen Sie nur den src Ordner in VSCode (MondrianBlocksProject/src) und wählen die darin enthaltene CMakeLists.txt aus. Wenn Sie die googletests kompilieren möchten, öffnen Sie das komplette Repository (MondrianBlocksProject) als Ordner in VSCode und wählen Sie die erste CMakeLists.txt für Ihr Projekt aus.
 
 
 Execute the start_project.bat file.
 Works with the g++ compiler.
+To start the project with CMake, CMakeLists.txt files are provided in the repository. If you only want to compile the game itself, open the src folder (MondrianBlocksProject/src) via "Open Folder" in VSCode and select the CMakeLists.txt in the src folder. If you want to compile the googletests, open the whole repository (MondrianBlocksProject) via "Open Folder" in VSCode and select the first CMakeLists.txt, located in the main folder.
 
 ### Beschreibung der Implementierung / Description of the implementation
 Wir haben uns dazu entschieden das Programm in folgende Klassen aufzuteilen: Blocks, Field, Menu, Rules, Template, Win.

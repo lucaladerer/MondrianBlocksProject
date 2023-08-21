@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MondrianBlocksTests.dir/blockTest.cpp.obj"
   "CMakeFiles/MondrianBlocksTests.dir/blockTest.cpp.obj.d"
+  "CMakeFiles/MondrianBlocksTests.dir/fieldTest.cpp.obj"
+  "CMakeFiles/MondrianBlocksTests.dir/fieldTest.cpp.obj.d"
   "CMakeFiles/MondrianBlocksTests.dir/templateTest.cpp.obj"
   "CMakeFiles/MondrianBlocksTests.dir/templateTest.cpp.obj.d"
   "MondrianBlocksTests.exe"

@@ -68,5 +68,10 @@
   "directory": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/build/test",
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksTests.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\MondrianBlocksTests.dir\\templateTest.cpp.obj -c C:\\Users\\kevin\\Documents\\Code\\MondrianBlocksProject\\test\\templateTest.cpp",
   "file": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/test/templateTest.cpp"
+},
+{
+  "directory": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/build/test",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksTests.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\MondrianBlocksTests.dir\\fieldTest.cpp.obj -c C:\\Users\\kevin\\Documents\\Code\\MondrianBlocksProject\\test\\fieldTest.cpp",
+  "file": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/test/fieldTest.cpp"
 }
 ]
