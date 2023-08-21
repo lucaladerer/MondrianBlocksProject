@@ -6,6 +6,11 @@
 class Win : public Stats
 {
 public:
+    // constructor
+    Win();
+    // destructor
+    virtual ~Win();
+
     static bool checkForWin(char checkArray[8][8]);
 
     void winMessage();

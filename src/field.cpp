@@ -2,6 +2,10 @@
 #include <iostream>
 #include <fstream>
 
+// constructor and destructor definitions for Class Field
+Field::Field() {}
+Field::~Field() {}
+
 // Hier wird das "leere" 8x8 Feld mit 0 als char erstellt
 void Field::createField()
 {

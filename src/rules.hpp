@@ -4,6 +4,11 @@
 class Rules
 {
 public:
+    // constructor
+    Rules();
+    // destructor
+    virtual ~Rules();
+
     bool checkLegalMove(char checkArray[][8], int verPos, int horPos);
 private:
     const int lowerLimit = 0;

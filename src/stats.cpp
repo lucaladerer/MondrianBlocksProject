@@ -5,6 +5,10 @@ std::chrono::time_point<std::chrono::steady_clock> Stats::begin;
 std::chrono::time_point<std::chrono::steady_clock> Stats::end;
 std::chrono::duration<double> Stats::timeInSeconds;
 
+// constructor and destructor definitions for Class Stats
+Stats::Stats() {}
+Stats::~Stats() {}
+
 // initialize turns with 0
 int Stats::turns = 0;
 

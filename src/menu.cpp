@@ -2,6 +2,10 @@
 #include <string> 
 #include "menu.hpp"
 
+// constructor and destructor definitions for Class Menu
+Menu::Menu() {}
+Menu::~Menu() {}
+
 // print the Introduction
 void Menu::printIntroduction()
 {

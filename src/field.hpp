@@ -10,6 +10,12 @@ const int mondrianFieldSize = 8;
 class Field : public Win, public Rules
 {
 public:
+    // constructor
+    Field();
+    // destructor
+    virtual ~Field();
+    // internally set the picked template by the user
+
     void createField();
 
     void printField();

@@ -6,6 +6,11 @@
 class Menu : public Template
 {
 public:
+    // constructor
+    Menu();
+    // destructor
+    virtual ~Menu();
+
     void printIntroduction();
 
     bool chooseGamemode();

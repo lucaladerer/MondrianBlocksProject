@@ -6,6 +6,11 @@
 class Stats
 {
 public:
+    // constructor
+    Stats();
+    // destructor
+    virtual ~Stats();
+
     static void startTimer();
     static void endTimer();
     static void printElapsedTime();

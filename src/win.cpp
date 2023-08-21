@@ -1,6 +1,10 @@
 #include "win.hpp"
 #include <iostream>
 
+// constructor and destructor definitions for Class Win
+Win::Win() {}
+Win::~Win() {}
+
 // set static variable to false --> needed to end the loop while(unresolved) in main
 bool Win::winCondition = false;
 

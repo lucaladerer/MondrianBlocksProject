@@ -1,6 +1,10 @@
 #include "rules.hpp"
 #include <iostream>
 
+// constructor and destructor definitions for Class Rules
+Rules::Rules() {}
+Rules::~Rules() {}
+
 // Check for crossing of boundaries or collision --> given field gets checked at each position of new Element of chosen block
 bool Rules::checkLegalMove(char checkArray[][8], int verPos, int horPos)
 {
