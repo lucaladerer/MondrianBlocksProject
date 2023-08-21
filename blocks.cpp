@@ -160,6 +160,18 @@ int Blocks::userSetBlock(int y, int x)
     {
         // tell the user to pick again and return 2 so while loop in main.cpp repeats
         std::cout << "You can't place your block there. Please choose a new position." << std::endl;
+        // switch ASCII value of currently picked block's letter to assign availability status "available" back to picked block
+        switch(val)
+        {
+            case 65: av14 = true; break;
+            case 66: av15 = true; break;
+            case 67: av23 = true; break;
+            case 68: av24 = true; break;
+            case 69: av25 = true; break;
+            case 70: av22 = true; break;
+            case 71: av33 = true; break;
+            case 72: av34 = true; break;
+        }
         return 2;
     }
     // if userSetBlock() was completed correctly, return 0 to exit while loop in main.cpp
