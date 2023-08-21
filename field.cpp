@@ -16,9 +16,6 @@ void Field::createField()
     }
     // if the file couldn't be opened, print error message
     else std::cout << "Could not open txt file." << std::endl;
-    // assign input values from .txt file in variables for the size of char array field[][]
-    // mondrianFieldSizeY = fieldsizetxt[0] - 48;
-    // mondrianFieldSizeX = fieldsizetxt[2] - 48;
     // fill the start array with zeroes
     for(int col = 0; col <= 7; col++)
     {
