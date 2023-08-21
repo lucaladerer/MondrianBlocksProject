@@ -64,6 +64,16 @@ CMAKE_BINARY_DIR = C:\Users\kevin\Documents\Code\MondrianBlocksProject\build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	C:\msys64\mingw64\bin\ctest.exe --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -83,6 +93,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	C:\msys64\mingw64\bin\cmake.exe -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	C:\msys64\mingw64\bin\cmake.exe -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	C:\msys64\mingw64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	C:\msys64\mingw64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	C:\msys64\mingw64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	C:\msys64\mingw64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -116,209 +171,274 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MondrianBlocksProject
+# Target rules for targets named GTest
 
 # Build rule for target.
-MondrianBlocksProject: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MondrianBlocksProject
-.PHONY : MondrianBlocksProject
+GTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 GTest
+.PHONY : GTest
 
 # fast build rule for target.
-MondrianBlocksProject/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/build
-.PHONY : MondrianBlocksProject/fast
+GTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/build
+.PHONY : GTest/fast
 
-blocks.obj: blocks.cpp.obj
-.PHONY : blocks.obj
+#=============================================================================
+# Target rules for targets named gmock
 
-# target to build an object file
-blocks.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/blocks.cpp.obj
-.PHONY : blocks.cpp.obj
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock
+.PHONY : gmock
 
-blocks.i: blocks.cpp.i
-.PHONY : blocks.i
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
 
-# target to preprocess a source file
-blocks.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/blocks.cpp.i
-.PHONY : blocks.cpp.i
+#=============================================================================
+# Target rules for targets named gmock_main
 
-blocks.s: blocks.cpp.s
-.PHONY : blocks.s
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock_main
+.PHONY : gmock_main
 
-# target to generate assembly for a file
-blocks.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/blocks.cpp.s
-.PHONY : blocks.cpp.s
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
 
-field.obj: field.cpp.obj
-.PHONY : field.obj
+#=============================================================================
+# Target rules for targets named gtest
 
-# target to build an object file
-field.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/field.cpp.obj
-.PHONY : field.cpp.obj
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest
+.PHONY : gtest
 
-field.i: field.cpp.i
-.PHONY : field.i
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
-# target to preprocess a source file
-field.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/field.cpp.i
-.PHONY : field.cpp.i
+#=============================================================================
+# Target rules for targets named gtest_main
 
-field.s: field.cpp.s
-.PHONY : field.s
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest_main
+.PHONY : gtest_main
 
-# target to generate assembly for a file
-field.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/field.cpp.s
-.PHONY : field.cpp.s
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+#=============================================================================
+# Target rules for targets named MondrianBlocksTests
 
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+# Build rule for target.
+MondrianBlocksTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MondrianBlocksTests
+.PHONY : MondrianBlocksTests
 
-main.i: main.cpp.i
-.PHONY : main.i
+# fast build rule for target.
+MondrianBlocksTests/fast:
+	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\MondrianBlocksTests.dir\build.make test/CMakeFiles/MondrianBlocksTests.dir/build
+.PHONY : MondrianBlocksTests/fast
 
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-menu.obj: menu.cpp.obj
-.PHONY : menu.obj
+src/blocks.obj: src/blocks.cpp.obj
+.PHONY : src/blocks.obj
 
 # target to build an object file
-menu.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/menu.cpp.obj
-.PHONY : menu.cpp.obj
+src/blocks.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/blocks.cpp.obj
+.PHONY : src/blocks.cpp.obj
 
-menu.i: menu.cpp.i
-.PHONY : menu.i
+src/blocks.i: src/blocks.cpp.i
+.PHONY : src/blocks.i
 
 # target to preprocess a source file
-menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/menu.cpp.i
-.PHONY : menu.cpp.i
+src/blocks.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/blocks.cpp.i
+.PHONY : src/blocks.cpp.i
 
-menu.s: menu.cpp.s
-.PHONY : menu.s
+src/blocks.s: src/blocks.cpp.s
+.PHONY : src/blocks.s
 
 # target to generate assembly for a file
-menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/menu.cpp.s
-.PHONY : menu.cpp.s
+src/blocks.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/blocks.cpp.s
+.PHONY : src/blocks.cpp.s
 
-rules.obj: rules.cpp.obj
-.PHONY : rules.obj
+src/field.obj: src/field.cpp.obj
+.PHONY : src/field.obj
 
 # target to build an object file
-rules.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/rules.cpp.obj
-.PHONY : rules.cpp.obj
+src/field.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/field.cpp.obj
+.PHONY : src/field.cpp.obj
 
-rules.i: rules.cpp.i
-.PHONY : rules.i
+src/field.i: src/field.cpp.i
+.PHONY : src/field.i
 
 # target to preprocess a source file
-rules.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/rules.cpp.i
-.PHONY : rules.cpp.i
+src/field.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/field.cpp.i
+.PHONY : src/field.cpp.i
 
-rules.s: rules.cpp.s
-.PHONY : rules.s
+src/field.s: src/field.cpp.s
+.PHONY : src/field.s
 
 # target to generate assembly for a file
-rules.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/rules.cpp.s
-.PHONY : rules.cpp.s
+src/field.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/field.cpp.s
+.PHONY : src/field.cpp.s
 
-stats.obj: stats.cpp.obj
-.PHONY : stats.obj
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
 
 # target to build an object file
-stats.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/stats.cpp.obj
-.PHONY : stats.cpp.obj
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
 
-stats.i: stats.cpp.i
-.PHONY : stats.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-stats.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/stats.cpp.i
-.PHONY : stats.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-stats.s: stats.cpp.s
-.PHONY : stats.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-stats.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/stats.cpp.s
-.PHONY : stats.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-template.obj: template.cpp.obj
-.PHONY : template.obj
+src/menu.obj: src/menu.cpp.obj
+.PHONY : src/menu.obj
 
 # target to build an object file
-template.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/template.cpp.obj
-.PHONY : template.cpp.obj
+src/menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/menu.cpp.obj
+.PHONY : src/menu.cpp.obj
 
-template.i: template.cpp.i
-.PHONY : template.i
+src/menu.i: src/menu.cpp.i
+.PHONY : src/menu.i
 
 # target to preprocess a source file
-template.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/template.cpp.i
-.PHONY : template.cpp.i
+src/menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/menu.cpp.i
+.PHONY : src/menu.cpp.i
 
-template.s: template.cpp.s
-.PHONY : template.s
+src/menu.s: src/menu.cpp.s
+.PHONY : src/menu.s
 
 # target to generate assembly for a file
-template.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/template.cpp.s
-.PHONY : template.cpp.s
+src/menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/menu.cpp.s
+.PHONY : src/menu.cpp.s
 
-win.obj: win.cpp.obj
-.PHONY : win.obj
+src/rules.obj: src/rules.cpp.obj
+.PHONY : src/rules.obj
 
 # target to build an object file
-win.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/win.cpp.obj
-.PHONY : win.cpp.obj
+src/rules.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/rules.cpp.obj
+.PHONY : src/rules.cpp.obj
 
-win.i: win.cpp.i
-.PHONY : win.i
+src/rules.i: src/rules.cpp.i
+.PHONY : src/rules.i
 
 # target to preprocess a source file
-win.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/win.cpp.i
-.PHONY : win.cpp.i
+src/rules.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/rules.cpp.i
+.PHONY : src/rules.cpp.i
 
-win.s: win.cpp.s
-.PHONY : win.s
+src/rules.s: src/rules.cpp.s
+.PHONY : src/rules.s
 
 # target to generate assembly for a file
-win.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MondrianBlocksProject.dir\build.make CMakeFiles/MondrianBlocksProject.dir/win.cpp.s
-.PHONY : win.cpp.s
+src/rules.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/rules.cpp.s
+.PHONY : src/rules.cpp.s
+
+src/stats.obj: src/stats.cpp.obj
+.PHONY : src/stats.obj
+
+# target to build an object file
+src/stats.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/stats.cpp.obj
+.PHONY : src/stats.cpp.obj
+
+src/stats.i: src/stats.cpp.i
+.PHONY : src/stats.i
+
+# target to preprocess a source file
+src/stats.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/stats.cpp.i
+.PHONY : src/stats.cpp.i
+
+src/stats.s: src/stats.cpp.s
+.PHONY : src/stats.s
+
+# target to generate assembly for a file
+src/stats.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/stats.cpp.s
+.PHONY : src/stats.cpp.s
+
+src/template.obj: src/template.cpp.obj
+.PHONY : src/template.obj
+
+# target to build an object file
+src/template.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/template.cpp.obj
+.PHONY : src/template.cpp.obj
+
+src/template.i: src/template.cpp.i
+.PHONY : src/template.i
+
+# target to preprocess a source file
+src/template.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/template.cpp.i
+.PHONY : src/template.cpp.i
+
+src/template.s: src/template.cpp.s
+.PHONY : src/template.s
+
+# target to generate assembly for a file
+src/template.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/template.cpp.s
+.PHONY : src/template.cpp.s
+
+src/win.obj: src/win.cpp.obj
+.PHONY : src/win.obj
+
+# target to build an object file
+src/win.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/win.cpp.obj
+.PHONY : src/win.cpp.obj
+
+src/win.i: src/win.cpp.i
+.PHONY : src/win.i
+
+# target to preprocess a source file
+src/win.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/win.cpp.i
+.PHONY : src/win.cpp.i
+
+src/win.s: src/win.cpp.s
+.PHONY : src/win.s
+
+# target to generate assembly for a file
+src/win.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GTest.dir\build.make CMakeFiles/GTest.dir/src/win.cpp.s
+.PHONY : src/win.cpp.s
 
 # Help Target
 help:
@@ -327,32 +447,42 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... MondrianBlocksProject
-	@echo ... blocks.obj
-	@echo ... blocks.i
-	@echo ... blocks.s
-	@echo ... field.obj
-	@echo ... field.i
-	@echo ... field.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... menu.obj
-	@echo ... menu.i
-	@echo ... menu.s
-	@echo ... rules.obj
-	@echo ... rules.i
-	@echo ... rules.s
-	@echo ... stats.obj
-	@echo ... stats.i
-	@echo ... stats.s
-	@echo ... template.obj
-	@echo ... template.i
-	@echo ... template.s
-	@echo ... win.obj
-	@echo ... win.i
-	@echo ... win.s
+	@echo ... test
+	@echo ... GTest
+	@echo ... MondrianBlocksTests
+	@echo ... gmock
+	@echo ... gmock_main
+	@echo ... gtest
+	@echo ... gtest_main
+	@echo ... src/blocks.obj
+	@echo ... src/blocks.i
+	@echo ... src/blocks.s
+	@echo ... src/field.obj
+	@echo ... src/field.i
+	@echo ... src/field.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/menu.obj
+	@echo ... src/menu.i
+	@echo ... src/menu.s
+	@echo ... src/rules.obj
+	@echo ... src/rules.i
+	@echo ... src/rules.s
+	@echo ... src/stats.obj
+	@echo ... src/stats.i
+	@echo ... src/stats.s
+	@echo ... src/template.obj
+	@echo ... src/template.i
+	@echo ... src/template.s
+	@echo ... src/win.obj
+	@echo ... src/win.i
+	@echo ... src/win.s
 .PHONY : help
 
 

@@ -1,0 +1,42 @@
+[
+{
+  "directory": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksProject.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\MondrianBlocksProject.dir\\field.cpp.obj -c C:\\Users\\kevin\\Documents\\Code\\MondrianBlocksProject\\src\\field.cpp",
+  "file": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/field.cpp"
+},
+{
+  "directory": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksProject.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\MondrianBlocksProject.dir\\main.cpp.obj -c C:\\Users\\kevin\\Documents\\Code\\MondrianBlocksProject\\src\\main.cpp",
+  "file": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/main.cpp"
+},
+{
+  "directory": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksProject.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\MondrianBlocksProject.dir\\menu.cpp.obj -c C:\\Users\\kevin\\Documents\\Code\\MondrianBlocksProject\\src\\menu.cpp",
+  "file": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/menu.cpp"
+},
+{
+  "directory": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksProject.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\MondrianBlocksProject.dir\\rules.cpp.obj -c C:\\Users\\kevin\\Documents\\Code\\MondrianBlocksProject\\src\\rules.cpp",
+  "file": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/rules.cpp"
+},
+{
+  "directory": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksProject.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\MondrianBlocksProject.dir\\stats.cpp.obj -c C:\\Users\\kevin\\Documents\\Code\\MondrianBlocksProject\\src\\stats.cpp",
+  "file": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/stats.cpp"
+},
+{
+  "directory": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksProject.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\MondrianBlocksProject.dir\\template.cpp.obj -c C:\\Users\\kevin\\Documents\\Code\\MondrianBlocksProject\\src\\template.cpp",
+  "file": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/template.cpp"
+},
+{
+  "directory": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksProject.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\MondrianBlocksProject.dir\\win.cpp.obj -c C:\\Users\\kevin\\Documents\\Code\\MondrianBlocksProject\\src\\win.cpp",
+  "file": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/win.cpp"
+},
+{
+  "directory": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksProject.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\MondrianBlocksProject.dir\\blocks.cpp.obj -c C:\\Users\\kevin\\Documents\\Code\\MondrianBlocksProject\\src\\blocks.cpp",
+  "file": "C:/Users/kevin/Documents/Code/MondrianBlocksProject/src/blocks.cpp"
+}
+]
