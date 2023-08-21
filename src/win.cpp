@@ -7,7 +7,7 @@ bool Win::winCondition = false;
 // go through array and check every element --> if '0' then there is an empty field
 bool Win::checkForWin(char checkArray[8][8])
 {
-    winCondition = true;
+    winCondition = false;
     for(int ver = 0; ver <= 7; ver++)
     {
         for(int hor = 0; hor <= 7; hor++)
@@ -17,8 +17,12 @@ bool Win::checkForWin(char checkArray[8][8])
                 winCondition = false;
                 return false;
             }
+            else
+                winCondition = true;
         }
     }
+    if(winCondition)
+    return true;
 }
 
 // print the win message and show the stats

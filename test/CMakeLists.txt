@@ -10,6 +10,9 @@ set(
         blockTest.cpp
         templateTest.cpp
         fieldTest.cpp
+        menuTest.cpp
+        rulesTest.cpp
+        winTest.cpp
 )
 
 add_executable(

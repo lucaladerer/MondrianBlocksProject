@@ -1,6 +1,6 @@
 #include "../src/blocks.hpp"
 
-#include <gtest/gtest.h>
+#include "gtest/gtest.h"
 
 TEST(FirstTest, ChooseBlockTestTrue)
 {
