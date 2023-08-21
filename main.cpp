@@ -1,58 +1,122 @@
 #include "menu.hpp"
 #include "blocks.hpp"
 #include "win.hpp"
-// #include "field.hpp"
+#include "stats.hpp"
 #include <iostream>
+
+// create boolean to repeat asking for user input while template is unresolved
+static bool unresolved = true;
 
 int main()
 {
+    // create object of Class Menu (menu.hpp)
     Menu startMenu;
+    // print Introduction from Menu
     startMenu.printIntroduction();
-    startMenu.chooseGamemode();
 
-    int chosenTemplate = startMenu.chooseTemplate();
+    // create boolean to check if request startMenu.chooseGamemode() is completed
+    bool chooseGamemodeRequest = true;
+    while(chooseGamemodeRequest)
+    {
+        // make the user choose a gamemode and initialize chooseGamemodeRequest with return value from startMenu.chooseGamemode()
+        chooseGamemodeRequest = startMenu.chooseGamemode();
+    }
 
-    std::cout << chosenTemplate << std::endl;
+    // while(playAgain)
 
+    // create static int to store the picked template
+    static int chosenTemplate;
+    // ask user for template pick and create Object from Class field > template, save return value in static int ( 1 || 2 || 3)
+    bool chooseTemplateRequest = true;
+    while(chooseTemplateRequest)
+    {
+        // assign return value of method chooseTemplate() to static int
+        chosenTemplate = startMenu.chooseTemplate();
+        // if the user picked a template correctly, exit the while loop
+        if(chosenTemplate != 0) chooseTemplateRequest = false;
+    }
+
+    // create Object of Class Blocks (blocks.hpp)
     Blocks userblocks;
+    // set picked template in Object userblocks
     userblocks.setPlayTemplate(chosenTemplate);
 
-    bool unresolved = true;
-    while(unresolved)
-        {    
-            char blockPicked[3];
-            userblocks.availableBlocks();
-            bool userChooseBlockRequest = true;
-            while(userChooseBlockRequest)
-            {
-            std::cout << "Welchen Block moechten Sie waehlen? Geben Sie bspw. '3x4' ein" << std::endl;
-            std::cin >> blockPicked;
-            std::cout <<  std::endl;
+    Stats::startTimer();
 
+    while(unresolved)
+    {
+        while(true) {
+            // create goto position
+            // create char for saving the block picked by the user
+            char blockPicked[3];
+            // create int to check if the user decided to remove a block correctly
+            int removeBlockRequest = 1;
+            // while userblocks.deleteBlock() received wrong user input
+            while (removeBlockRequest == 1) {
+                // ask the user whether to delete or set a block, initialize int value with return value
+                removeBlockRequest = userblocks.deleteBlock();
+                // if the user deleted a block
+            }
+            if (removeBlockRequest == 2) {
+                // print the new field and then go back to start:
+                userblocks.printFinalField();
+                break;
+            }
+            // create boolean to check if the user chose a block to set correctly
+            bool userChooseBlockRequest = true;
+            // print the blocks available to set to console
+            userblocks.availableBlocks();
+            while (userChooseBlockRequest) {
+                std::cout << "Which block do you want to set? For example enter '3x4'" << std::endl;
+                // store the picked block in char blockPicked[3]
+                std::cin >> blockPicked;
+                std::cout << std::endl;
+                // pass the chosen block through to object userblocks and save return value in boolean
                 userChooseBlockRequest = userblocks.userChooseBlock(blockPicked);
             }
+            // create boolean to check if user input for block rotation was correct
             bool rotateRequest = true;
+            // create char to save user input
             char rotateInput;
-            while(rotateRequest)
-            {
-                std::cout << "Moechten Sie den Block drehen?\nGeben Sie ein 'y' fuer Ja oder 'n' fuer nein." << std::endl;
+            while (rotateRequest) {
+                std::cout << "Do you want to rotate your picked block?\nEnter 'y' for yes or 'n' for no."
+                          << std::endl;
+                // store input in char rotateInput
                 std::cin >> rotateInput;
                 std::cout << std::endl;
-                if(rotateInput == 'y' || rotateInput == 'Y' || rotateInput == 'j' || rotateInput == 'J')
-                {
-                    bool rotateBlock = true;
-                }
+                // pass user input through to object userblocks to rotate block, store return value in rotateRequest
                 rotateRequest = userblocks.rotateBlock(rotateInput);
             }
-            bool setBlockRequest = true;
-            while(setBlockRequest)
+            // create integer to check if user typed in correct block coordinates
+            int setBlockRequest = 1;
+            // while the input was spelled wrong
+            while (setBlockRequest == 1)
             {
-                // Zeile geht über Bildschirm hinaus um Leserlichkeit zu verbessern / Textausgabe nicht für Verständnis vom Code relevant
-                std::cout << "Wo moechten Sie den Block platzieren?\nGeben Sie zuerst die horizontale Position ein, dann die vertikale Position.\nPositionen vom 1-8, gezaehlt von links nach rechts bzw. oben nach unten." << std::endl;
+                // line is longer than screen to simplify reading the code since it's not relevant for understanding the code
+                std::cout
+                        << "Where do you want to place your block?\nEnter the horizontal position first, then the vertical position.\nPositions go from 1-8, counted from left to right / top to bottom."
+                        << std::endl;
+                // create integers for block position
                 int x, y;
+                // save the desired position in integers x/y
                 std::cin >> x >> y;
-                setBlockRequest = userblocks.userSetBlock(y, x);  //evtl. rotateBlock übergeben?
+                // set the users selected block to desired position y and x and save return value in setBlockRequest
+                setBlockRequest = userblocks.userSetBlock(y, x);
+                Stats::turns++;
+                // if the block selected by the user doesn't fit in the field anymore go back to the beginning of while(unresolved) loop
+                if (setBlockRequest == 2)
+                    {
+                        break;
+                    }
             }
+            if(Win::winCondition)
+                {
+                    unresolved = false;
+                    break;
+                }
+
         }
+    }
+    // userblocks.printFinalField();
     return 0;
 }

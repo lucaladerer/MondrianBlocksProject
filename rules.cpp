@@ -1,20 +1,19 @@
 #include "rules.hpp"
 #include <iostream>
 
-
-// Überprüfung auf Grenzüberschreitung oder Kollision
-bool Rules::checkLegalMove(char checkArray[8][8], int verPos, int horPos)
+// Check for crossing of boundaries or collision --> given field gets checked at each position of new Element of chosen block
+bool Rules::checkLegalMove(char checkArray[][8], int verPos, int horPos)
 {
-    // Indizes kleiner 0 oder größer 7?
+    // check if Index is lower than 0 or higher than 7
     if(verPos < lowerLimit || verPos > upperLimit || horPos < lowerLimit || horPos > upperLimit)
     {
-        std::cout << "Ungueltige Eingabe: Grenzueberschreitung!\nBitte erneut waehlen." << std::endl;
+        std::cout << "Input not valid: Outside of barrier!\nPlease choose again." << std::endl;
         return false;
     }
-    // Element an Stelle [verPos][horPos] != '0'? Wenn ja, ist Feld bereits belegt
+    // Check if element at [verPos][horPos] != '0'? if yes, field is not empty
     else if(checkArray[verPos][horPos] != '0')
     {
-        std::cout << "Ungueltige Eingabe: Kollision!\nBitte erneut waehlen." << std::endl;
+        std::cout << "Input not valid: Collision!\nPlease choose again." << std::endl;
         return false;
     }
     return true;

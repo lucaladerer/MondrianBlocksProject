@@ -1,19 +1,19 @@
 #ifndef STATS_HPP_INCLUDED
 #define STATS_HPP_INCLUDED
 #include <chrono>
-// Zählen der Zeit ab Begin des Levels
+
+// count the time to solve the level
 class Stats
 {
 public:
-    void startTimer();
-    void endTimer();
-    void printElapsedTime();
-protected:
+    static void startTimer();
+    static void endTimer();
+    static void printElapsedTime();
     static int turns;
 private:
-    std::chrono::time_point<std::chrono::steady_clock> begin;
-    std::chrono::time_point<std::chrono::steady_clock> end;
-    std::chrono::duration<double> timeInSeconds;
+    static std::chrono::time_point<std::chrono::steady_clock> begin;
+    static std::chrono::time_point<std::chrono::steady_clock> end;
+    static std::chrono::duration<double> timeInSeconds;
 };
 
 #endif  // STATS_HPP_INCLUDED
