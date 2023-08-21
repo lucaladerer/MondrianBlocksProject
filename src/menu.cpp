@@ -9,13 +9,14 @@ Menu::~Menu() {}
 // print the Introduction
 void Menu::printIntroduction()
 {
-    std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
+    std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
     std::cout << "Welcome to MondrianBlocks by Luca and Kevin\n" << std::endl;
     std::cout << "The game works like this:\nPick a gamemode first. (In this version only 'Play' is available)." << std::endl;
     std::cout << "In the next step you can pick one of three templates." << std::endl;
     std::cout << "The goal is to fill the 8x8 field with the available blocks.\n" << std::endl;
+    std::cout << "** Hint for placing Blocks: You always enter the coordinates of the top left element of the Block! **\n" << std::endl;
     std::cout << "Have fun!" << std::endl;
-    std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" << std::endl;
+    std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" << std::endl;
 }
 
 // Here you choose the gamemode. Solver is not playable but choosable in the Menu  (WIP)

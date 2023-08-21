@@ -92,10 +92,9 @@ int main()
             // while the input was spelled wrong
             while (setBlockRequest == 1)
             {
-                // line is longer than screen to simplify reading the code since it's not relevant for understanding the code
-                std::cout
-                        << "Where do you want to place your block?\nEnter the horizontal position first, then the vertical position.\nPositions go from 1-8, counted from left to right / top to bottom."
-                        << std::endl;
+                std::cout << "Where do you want to place your block?\tThe top left element of the block is the anker!" << std::endl;
+                std::cout << "Enter the horizontal position first, then the vertical position." << std::endl;
+                std::cout << "Positions go from 1-8, counted from left to right / top to bottom." << std::endl;
                 // create integers for block position
                 int x, y;
                 // save the desired position in integers x/y
