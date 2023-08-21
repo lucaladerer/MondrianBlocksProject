@@ -30,5 +30,19 @@ void Win::winMessage()
     std::cout << "Stats:\tYou needed " << turns << " turns to solve the Level" << std::endl;
 
     Stats::printElapsedTime();
+
+    if(turns >= 7 <= 10)
+    {
+        std::cout << "\nX\tX\tX\nYou achieved 3 out of 3 points." << std::endl;
+    }
+    else if(turns > 10 <= 13)
+    {
+        std::cout << "\nX\tX\t_\nYou achieved 2 out of 3 points." << std::endl;
+    }
+    else if(turns > 13)
+    {
+        std::cout << "\nX\t_\t_\nYou achieved 1 out of 3 points." << std::endl;
+    }
+
     std::cout << std::endl;
 }

@@ -10,14 +10,6 @@ const int mondrianFieldSize = 8;
 class Field : public Win, public Rules
 {
 public:
-    Field()
-    {
-       // Stats::turns = 0;     Auskommentiert wegen Compilerfehler!
-    };
-
-    ~Field()
-    {};
-
     void createField();
 
     void printField();
