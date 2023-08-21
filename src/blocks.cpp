@@ -73,6 +73,25 @@ bool Blocks::userChooseBlock(char chosenBlock[3])
     else { std::cout << "Please choose your block again." << std::endl; return true; }
     // assign ASCII value of currently selected block's letter to private integer val (see blocks.hpp)
     val = blockbuffer;
+    // create temporary bool to check if picked block is already set
+    bool tempStatus;
+    switch(val)
+    {
+        case 65: tempStatus = av14; break;
+        case 66: tempStatus = av15; break;
+        case 67: tempStatus = av23; break;
+        case 68: tempStatus = av24; break;
+        case 69: tempStatus = av25; break;
+        case 70: tempStatus = av22; break;
+        case 71: tempStatus = av33; break;
+        case 72: tempStatus = av34; break;
+    }
+    // if the picked block is already set ask user to pick block again
+    if(!tempStatus)
+    {
+        std::cout << "Block is already set. Please pick again." << std::endl;
+        return true;
+    }
     // if every input was set correctly, exit the while loop in main.cpp and continue asking the user for block position
     return false;
 }
