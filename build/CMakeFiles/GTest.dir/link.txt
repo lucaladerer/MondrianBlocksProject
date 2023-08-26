@@ -1,2 +1,0 @@
-C:\msys64\mingw64\bin\ar.exe qc libGTest.a CMakeFiles/GTest.dir/src/main.cpp.obj CMakeFiles/GTest.dir/src/blocks.cpp.obj CMakeFiles/GTest.dir/src/field.cpp.obj CMakeFiles/GTest.dir/src/menu.cpp.obj CMakeFiles/GTest.dir/src/rules.cpp.obj CMakeFiles/GTest.dir/src/stats.cpp.obj CMakeFiles/GTest.dir/src/template.cpp.obj CMakeFiles/GTest.dir/src/win.cpp.obj
-C:\msys64\mingw64\bin\ranlib.exe libGTest.a
