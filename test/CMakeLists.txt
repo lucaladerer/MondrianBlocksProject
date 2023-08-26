@@ -1,33 +1,24 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.8)
 
-set(
-        Tests
-        MondrianBlocksTests
-)
+set(This MondrianBlocksTest)
 
-set(
-        Test_Sources
-        blockTest.cpp
-        templateTest.cpp
-        fieldTest.cpp
-        menuTest.cpp
-        rulesTest.cpp
-        winTest.cpp
-)
+set(Sources
+    blockTest.cpp
+    fieldTest.cpp
+    gameTest.cpp
+    menuTest.cpp
+    rulesTest.cpp
+    templateTest.cpp
+    winTest.cpp)
 
-add_executable(
-        ${Tests}
-        ${Test_Sources}
-)
+add_executable(${This} ${Sources})
 
-target_link_libraries(
-        ${Tests}
-        PUBLIC
-        GTest::gtest_main
-        ${PROJECT_NAME}
+target_link_libraries(${This} PUBLIC
+    gtest_main
+    MondrianBlocks_LL_KL
 )
 
 add_test(
-        NAME ${Tests}
-        COMMAND ${Tests}
+    NAME ${This}
+    COMMAND ${This}
 )

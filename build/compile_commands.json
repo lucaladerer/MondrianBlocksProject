@@ -1,0 +1,176 @@
+[
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL.dir\\src\\blocks.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\blocks.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/blocks.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL.dir/src/blocks.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL.dir\\src\\field.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\field.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/field.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL.dir/src/field.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL.dir\\src\\game.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\game.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/game.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL.dir/src/game.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL.dir\\src\\main.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\main.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/main.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL.dir\\src\\menu.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\menu.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/menu.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL.dir/src/menu.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL.dir\\src\\rules.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\rules.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/rules.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL.dir/src/rules.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL.dir\\src\\stats.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\stats.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/stats.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL.dir/src/stats.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL.dir\\src\\template.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\template.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/template.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL.dir/src/template.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL.dir\\src\\win.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\win.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/win.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL.dir/src/win.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL_app.dir\\src\\main.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\main.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/main.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL_app.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL_app.dir\\src\\blocks.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\blocks.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/blocks.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL_app.dir/src/blocks.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL_app.dir\\src\\field.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\field.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/field.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL_app.dir/src/field.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL_app.dir\\src\\game.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\game.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/game.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL_app.dir/src/game.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL_app.dir\\src\\menu.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\menu.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/menu.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL_app.dir/src/menu.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL_app.dir\\src\\rules.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\rules.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/rules.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL_app.dir/src/rules.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL_app.dir\\src\\stats.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\stats.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/stats.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL_app.dir/src/stats.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL_app.dir\\src\\template.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\template.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/template.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL_app.dir/src/template.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\MondrianBlocks_LL_KL_app.dir\\src\\win.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\src\\win.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/src/win.cpp",
+  "output": "CMakeFiles/MondrianBlocks_LL_KL_app.dir/src/win.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/lib/googletest/googlemock",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gmock.dir/includes_CXX.rsp -g -std=c++11 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c C:\\Users\\lucal\\MB_Project-final-test\\lib\\googletest\\googlemock\\src\\gmock-all.cc",
+  "file": "C:/Users/lucal/MB_Project-final-test/lib/googletest/googlemock/src/gmock-all.cc",
+  "output": "lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/lib/googletest/googlemock",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gmock_main.dir/includes_CXX.rsp -g -std=c++11 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c C:\\Users\\lucal\\MB_Project-final-test\\lib\\googletest\\googlemock\\src\\gmock_main.cc",
+  "file": "C:/Users/lucal/MB_Project-final-test/lib/googletest/googlemock/src/gmock_main.cc",
+  "output": "lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/lib/googletest/googletest",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gtest.dir/includes_CXX.rsp -g -std=c++11 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c C:\\Users\\lucal\\MB_Project-final-test\\lib\\googletest\\googletest\\src\\gtest-all.cc",
+  "file": "C:/Users/lucal/MB_Project-final-test/lib/googletest/googletest/src/gtest-all.cc",
+  "output": "lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/lib/googletest/googletest",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gtest_main.dir/includes_CXX.rsp -g -std=c++11 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c C:\\Users\\lucal\\MB_Project-final-test\\lib\\googletest\\googletest\\src\\gtest_main.cc",
+  "file": "C:/Users/lucal/MB_Project-final-test/lib/googletest/googletest/src/gtest_main.cc",
+  "output": "lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/test",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksTest.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\MondrianBlocksTest.dir\\blockTest.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\test\\blockTest.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/test/blockTest.cpp",
+  "output": "test/CMakeFiles/MondrianBlocksTest.dir/blockTest.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/test",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksTest.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\MondrianBlocksTest.dir\\fieldTest.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\test\\fieldTest.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/test/fieldTest.cpp",
+  "output": "test/CMakeFiles/MondrianBlocksTest.dir/fieldTest.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/test",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksTest.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\MondrianBlocksTest.dir\\gameTest.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\test\\gameTest.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/test/gameTest.cpp",
+  "output": "test/CMakeFiles/MondrianBlocksTest.dir/gameTest.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/test",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksTest.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\MondrianBlocksTest.dir\\menuTest.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\test\\menuTest.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/test/menuTest.cpp",
+  "output": "test/CMakeFiles/MondrianBlocksTest.dir/menuTest.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/test",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksTest.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\MondrianBlocksTest.dir\\rulesTest.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\test\\rulesTest.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/test/rulesTest.cpp",
+  "output": "test/CMakeFiles/MondrianBlocksTest.dir/rulesTest.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/test",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksTest.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\MondrianBlocksTest.dir\\templateTest.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\test\\templateTest.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/test/templateTest.cpp",
+  "output": "test/CMakeFiles/MondrianBlocksTest.dir/templateTest.cpp.obj"
+},
+{
+  "directory": "C:/Users/lucal/MB_Project-final-test/build/test",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/MondrianBlocksTest.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\MondrianBlocksTest.dir\\winTest.cpp.obj -c C:\\Users\\lucal\\MB_Project-final-test\\test\\winTest.cpp",
+  "file": "C:/Users/lucal/MB_Project-final-test/test/winTest.cpp",
+  "output": "test/CMakeFiles/MondrianBlocksTest.dir/winTest.cpp.obj"
+}
+]
