@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libMB.a CMakeFiles/MB.dir/src/blocks.cpp.obj CMakeFiles/MB.dir/src/field.cpp.obj CMakeFiles/MB.dir/src/game.cpp.obj CMakeFiles/MB.dir/src/main.cpp.obj CMakeFiles/MB.dir/src/menu.cpp.obj CMakeFiles/MB.dir/src/rules.cpp.obj CMakeFiles/MB.dir/src/stats.cpp.obj CMakeFiles/MB.dir/src/template.cpp.obj CMakeFiles/MB.dir/src/win.cpp.obj
+C:\msys64\mingw64\bin\ranlib.exe libMB.a
