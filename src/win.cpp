@@ -19,14 +19,12 @@ bool Win::checkForWin(char checkArray[8][8])
             if(checkArray[ver][hor] == '0')
             {
                 winCondition = false;
-                return false;
             }
             else
                 winCondition = true;
         }
     }
-    if(winCondition)
-    return true;
+    return winCondition;
 }
 
 // print the win message and show the stats

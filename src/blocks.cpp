@@ -200,6 +200,10 @@ bool Blocks::rotateBlock(char yn)
 {
     // create internal bool rotated and set to false to avoid setting wrong rotation status
     bool rotated = false;
+
+    // return value for method Blocks::rotateBlock(char yn)
+    bool rotatedReturnValue;
+
     // switch ASCII value of currently selected block's letter and save its current rotation status in internal boolean rotated
     switch(val)
     {
@@ -234,18 +238,18 @@ bool Blocks::rotateBlock(char yn)
                 default: std::cout << "Error re-assigning rotation bool." << std::endl; break;
             }
             // let method rotateBlock() return false status to exit while loop in main.cpp
-            return false;
+            rotatedReturnValue = false;
         }
         // if the user selected to not rotate a block, return false to exit while loop in main.cpp
         else if (yn == 'n' || yn == 'N')
         {
-            return false;
+            rotatedReturnValue = false;
         }
         // if the user made a wrong input, tell him to enter "y" or "n" again and return true to keep asking for user input in main.cpp
         else
         {
             std::cout << "Wrong input. Please try again." << std::endl;
-            return true;
+            rotatedReturnValue = true;
         }
     }
     // if the block already is rotated
@@ -268,21 +272,22 @@ bool Blocks::rotateBlock(char yn)
                 case 72: av34rotated = rotated; break;
             }
             // if the new rotation status was set correctly, return false from method rotateBlock() to exit while loop in main.cpp
-            return false;
+            rotatedReturnValue = false;
         }
         // if the user chose to not rotate the selected block
         else if (yn == 'n' || yn == 'N')
         {
             // return false to exit while loop in main.cpp
-            return false;
+            rotatedReturnValue = false;
         }
         // else if the user made a wrong input, return true to repeat while loop in main.cpp and repeat asking for input
         else
         {
             std::cout << "Wrong input. Please try again." << std::endl;
-            return true;
+            rotatedReturnValue = true;
         }
     }
+    return rotatedReturnValue;
 }
 
 // definition of integer method deleteBlock() asking and allowing the user to delete a block from the play field
