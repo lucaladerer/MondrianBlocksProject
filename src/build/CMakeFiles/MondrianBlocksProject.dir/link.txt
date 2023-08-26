@@ -1,3 +1,0 @@
-C:\msys64\mingw64\bin\cmake.exe -E rm -f CMakeFiles\MondrianBlocksProject.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\MondrianBlocksProject.dir/objects.a @CMakeFiles\MondrianBlocksProject.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\MondrianBlocksProject.dir/objects.a -Wl,--no-whole-archive -o MondrianBlocksProject.exe -Wl,--out-implib,libMondrianBlocksProject.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\MondrianBlocksProject.dir\linklibs.rsp
