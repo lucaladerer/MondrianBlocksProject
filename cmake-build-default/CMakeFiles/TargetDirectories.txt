@@ -1,3 +1,0 @@
-E:/Documents/GitHub/MondrianBlocksProject/cmake-build-default/CMakeFiles/MondrianBlocksProject.dir
-E:/Documents/GitHub/MondrianBlocksProject/cmake-build-default/CMakeFiles/edit_cache.dir
-E:/Documents/GitHub/MondrianBlocksProject/cmake-build-default/CMakeFiles/rebuild_cache.dir
